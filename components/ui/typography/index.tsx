@@ -1,0 +1,42 @@
+import React, { ReactNode } from 'react'
+
+type TypographyElement = 'h1' | 'h2' | 'h3' | 'h3' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'span' | 'div' | 'label' | 'legend';
+
+type TypographyVariant = 'paragraph' | 'headline' | 'subline' | 'nav-link'
+
+
+interface TypographyProps {
+    as?: TypographyElement;
+    variant: TypographyVariant;
+    className?: string;
+    children: ReactNode;
+}
+
+const Typography = ({ as = 'p', variant = "paragraph", className = '', children, ...props }: TypographyProps) => {
+
+    const Component = as
+
+    const getVariantClasses = () => {
+        switch (variant) {
+            case 'headline':
+                return 'text-4xl font-bold leading-tight';
+            case 'subline':
+                return 'text-xl font-medium text-gray-600';
+            case 'paragraph':
+                return 'text-base leading-relaxed';
+            case 'nav-link':
+                return 'text-base font-semibold hover:text-gray-300 transition-colors'
+
+            default:
+                return 'text-base';
+        }
+    }
+
+    return (
+        <Component className={`${getVariantClasses()} ${className}`} {...props}>
+            {children}
+        </Component >
+    )
+}
+
+export default Typography
