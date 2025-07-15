@@ -1,10 +1,25 @@
+import Image from 'next/image'
+import Link from 'next/link'
 import React from 'react'
+import Typography from '../ui/typography';
 
-type Props = {}
+interface CardProjectProps {
+    url: string;
+    name: string;
 
-const CardProject = (props: Props) => {
+}
+
+const CardProject = ({ url, name }: CardProjectProps) => {
     return (
-        <div className=''>CardProject</div>
+        <div className=''>
+            {/* <Image src={""} /> */}
+            <Link
+                href={url}
+            >
+                Click Here to Visit
+                <Typography as='span' variant='sub-link'>{name}</Typography>
+            </Link>
+        </div>
     )
 }
 

@@ -2,7 +2,7 @@ import React, { ReactNode } from 'react'
 
 type TypographyElement = 'h1' | 'h2' | 'h3' | 'h3' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'span' | 'div' | 'label' | 'legend';
 
-type TypographyVariant = 'paragraph' | 'headline' | 'subline' | 'nav-link'
+type TypographyVariant = 'paragraph' | 'headline' | 'subline' | 'nav-link' | 'sub-link'
 
 
 interface TypographyProps {
@@ -26,6 +26,8 @@ const Typography = ({ as = 'p', variant = "paragraph", className = '', children,
                 return 'text-base leading-relaxed';
             case 'nav-link':
                 return 'text-base font-semibold hover:text-gray-300 transition-colors'
+            case 'sub-link':
+                return 'font-medium font-bold  hover:text-gray-300 transition-colors'
 
             default:
                 return 'text-base';
