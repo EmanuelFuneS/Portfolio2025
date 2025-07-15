@@ -10,7 +10,10 @@ const NavBar = (props: Props) => {
         <nav className='w-full h-20 bg-[#222222]'>
             <div className='flex items-center justify-around h-full px-4 mx-auto max-w-7xl'>
                 <div>Logo</div>
-                <div className='flex justify-between w-1/2 lg:w-1/4'>
+                <div className='flex justify-between w-1/2 lg:w-1/3'>
+                    <Link href={'/'}>
+                        <Typography as='span' variant='nav-link'>About</Typography>
+                    </Link>
                     <Link href={'/projects'}>
                         <Typography as='span' variant='nav-link'>Projects</Typography>
                     </Link>
