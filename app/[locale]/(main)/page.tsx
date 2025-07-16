@@ -1,9 +1,13 @@
 'use client'
+import React from 'react'
+import Button from '@/components/ui/button'
 import Typography from '@/components/ui/typography'
 import UserImage from '@/components/user-image'
-import React from 'react'
 
-const Page = () => {
+const Page = ({ params: { locale } }: { params: { locale: string } }) => {
+
+    //const dict = await getDictionary(locale)
+
     return (
         <div className="h-11/12 flex flex-col justify-center items-center gap-10">
             <UserImage />
@@ -14,6 +18,7 @@ const Page = () => {
                 My expertise lies in crafting robust and scalable SaaS-based
                 architectures on the Amazon AWS platform.</Typography>
 
+            <Button text='Download CV' />
             <p>slice techs</p>
         </div>
     )

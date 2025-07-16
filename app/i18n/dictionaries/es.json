@@ -1,0 +1,14 @@
+{
+    "navigation": {
+        "about": "Sobre Mí",
+        "experiences": "Experiencias",
+        "projects": "Projectos",
+        "techs": "Tecnologias",
+        "contact": "Contacto"
+    },
+    "about": {},
+    "experiences": {},
+    "projects": {},
+    "techs": {},
+    "contact": {}
+}

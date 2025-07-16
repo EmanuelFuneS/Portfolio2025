@@ -1,0 +1,14 @@
+{
+    "navigation": {
+        "about": "About",
+        "experiences": "Experiences",
+        "projects": "Projects",
+        "techs": "Techs",
+        "contact": "Contact"
+    },
+    "about": {},
+    "experiences": {},
+    "projects": {},
+    "techs": {},
+    "contact": {}
+}

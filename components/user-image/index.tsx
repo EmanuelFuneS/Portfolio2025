@@ -13,7 +13,7 @@ const UserImage = (props: Props) => {
             <Image
                 src={theme === 'dark' ? userImageCustom : userImage}
                 alt='Emanuel Funes'
-                className='rounded-full object-cover aspect-auto w-[280px] h-[280px]'
+                className={`rounded-full object-cover aspect-auto w-[280px] h-[280px] ${theme === 'dark' ? 'scale-x-[-1]' : ''} transition-transform duration-300`}
                 priority
             />
         </div>
