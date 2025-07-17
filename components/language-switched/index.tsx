@@ -4,7 +4,7 @@ const LanguageSwitched = () => {
     const [lang, setLang] = useState<string>('en')
 
 
-    const handleSelect = (e) => {
+    const handleSelect = (e: any) => {
         const langSelected = e.value;
         if (langSelected === 'en') {
             setLang('es')

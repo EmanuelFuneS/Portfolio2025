@@ -19,11 +19,11 @@ const Typography = ({ as = 'p', variant = "paragraph", className = '', children,
     const getVariantClasses = () => {
         switch (variant) {
             case 'headline':
-                return 'text-6xl font-bold leading-tight text-center';
+                return 'text-3xl font-bold leading-tight text-center';
             case 'subline':
-                return 'text-3xl font-medium text-gray-600';
+                return 'text-lg font-medium text-gray-600';
             case 'paragraph':
-                return 'text-lg leading-relaxed text-center';
+                return 'text-md leading-relaxed text-center';
             case 'nav-link':
                 return 'text-lg font-semibold hover:text-gray-300 transition-colors'
             case 'sub-link':

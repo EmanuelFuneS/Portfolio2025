@@ -1,5 +1,9 @@
-import { useTheme } from 'next-themes'
 import React from 'react'
+import { useTheme } from 'next-themes'
+import { Switch } from '@heroui/switch'
+import { MoonIcon, SunIcon } from '@/utils/icons'
+
+
 
 const ThemeSwitcher = () => {
     const { setTheme, theme } = useTheme()
@@ -13,11 +17,14 @@ const ThemeSwitcher = () => {
     }
 
     return (
-        <div>
-            <button className={`flex ${theme === 'dark' ? 'justify-start' : 'justify-end'} w-10 bg-gray-300 rounded-4xl p-1`} onClick={handleTheme}>
-                <div className='bg-white rounded-full w-3 h-3'></div>
-            </button>
-        </div>
+        <Switch
+            defaultSelected
+            color="default"
+            endContent={<MoonIcon />}
+            size="lg"
+            startContent={<SunIcon />}
+            onValueChange={handleTheme}
+        />
     )
 }
 

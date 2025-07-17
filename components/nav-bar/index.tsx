@@ -10,7 +10,7 @@ import LanguageSwitched from '../language-switched'
 
 const NavBar = () => {
     return (
-        <nav className='w-full h-20 dark:bg-[#222222]'>
+        <nav className='w-full h-20 bg-[#E5E7EB] dark:bg-[#222222]'>
             <div className='flex items-center justify-around h-full px-4 mx-auto max-w-7xl'>
                 <div>
                     <Image

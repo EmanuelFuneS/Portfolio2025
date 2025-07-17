@@ -10,4 +10,4 @@ export const getDictionary = async (locale: string) => {
 }
 
 export const locales = ['en', 'es'] as const
-export const defaultLocale = 'es' as const 
+export const defaultLocale = 'en' as const 

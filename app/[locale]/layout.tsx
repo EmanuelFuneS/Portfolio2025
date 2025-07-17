@@ -2,10 +2,12 @@ import type { Metadata } from "next";
 import { Geist_Mono, Exo_2 } from "next/font/google";
 import "../globals.css";
 import NavBar from "@/components/nav-bar";
-import { ThemeProvider } from "next-themes";
+import { ThemeProvider as NextThemesProvider } from "next-themes";
 import { locales } from "../i18n";
 import { getDictionary } from '../i18n'
 import { I18nProvider } from '../i18n/context'
+
+import { HeroUIProvider } from "@heroui/system";
 
 
 const exo2 = Exo_2({
@@ -43,15 +45,16 @@ export default async function RootLayout({
       <body
         className={`${exo2.variable} ${geistMono.variable} antialiased `}
       >
-        <ThemeProvider attribute={'class'}>
-          <I18nProvider dict={dict} locale={locale}>
-
-            <NavBar />
-            <main className=" max-w-7xl mx-auto px-4 py-8">
-              {children}
-            </main>
-          </I18nProvider>
-        </ThemeProvider>
+        <HeroUIProvider>
+          <NextThemesProvider attribute="class" defaultTheme="dark">
+            <I18nProvider dict={dict} locale={locale}>
+              <NavBar />
+              <main className=" max-w-7xl mx-auto px-4 py-8  dark:bg-[#161513] text-foreground bg-background">
+                {children}
+              </main>
+            </I18nProvider>
+          </NextThemesProvider>
+        </HeroUIProvider>
       </body>
     </html>
   );

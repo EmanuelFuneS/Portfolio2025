@@ -1,12 +1,30 @@
 'use client'
 import React from 'react'
-import Button from '@/components/ui/button'
+import CustomButton from '@/components/ui/button'
 import Typography from '@/components/ui/typography'
 import UserImage from '@/components/user-image'
+import { use } from 'react'
+import { useI18n } from '../../i18n/context'
+import { Button } from '@heroui/button'
 
-const Page = ({ params: { locale } }: { params: { locale: string } }) => {
 
-    //const dict = await getDictionary(locale)
+const Page = ({ params }: { params: Promise<{ locale: string }> }) => {
+
+    const { locale } = use(params);
+    const { dict } = useI18n();
+    /*
+    fix theme fore and background
+    fix i18n implement
+
+    finish languageSwitched
+    
+    extended dictionaries
+
+    finish about route
+    advance with experience route
+    start with techs route
+
+    */
 
     return (
         <div className="h-11/12 flex flex-col justify-center items-center gap-10">
@@ -18,7 +36,10 @@ const Page = ({ params: { locale } }: { params: { locale: string } }) => {
                 My expertise lies in crafting robust and scalable SaaS-based
                 architectures on the Amazon AWS platform.</Typography>
 
-            <Button text='Download CV' />
+            <div className='flex flex-wrap gap-4'>
+                <CustomButton>Download Cv</CustomButton>
+                <CustomButton>GITHUB</CustomButton>
+            </div>
             <p>slice techs</p>
         </div>
     )
