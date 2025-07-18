@@ -6,6 +6,7 @@ import UserImage from '@/components/user-image'
 import { use } from 'react'
 import { useI18n } from '../../i18n/context'
 import { Button } from '@heroui/button'
+import TechsSlice from '@/components/techs-slice'
 
 
 const Page = ({ params }: { params: Promise<{ locale: string }> }) => {
@@ -27,7 +28,7 @@ const Page = ({ params }: { params: Promise<{ locale: string }> }) => {
     */
 
     return (
-        <div className="h-11/12 flex flex-col justify-center items-center gap-10">
+        <div className="flex flex-col items-center justify-center gap-10 h-11/12">
             <UserImage />
             <Typography as="h1" variant='headline'>I do code and
                 make content about it!</Typography>
@@ -40,7 +41,10 @@ const Page = ({ params }: { params: Promise<{ locale: string }> }) => {
                 <CustomButton>Download Cv</CustomButton>
                 <CustomButton>GITHUB</CustomButton>
             </div>
-            <p>slice techs</p>
+            <Typography as='h3' variant='subline'>
+                Experience With
+            </Typography>
+            <TechsSlice />
         </div>
     )
 }

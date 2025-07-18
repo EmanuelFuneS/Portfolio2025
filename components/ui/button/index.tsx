@@ -1,17 +1,17 @@
+'use client'
 import React, { ReactNode } from 'react'
-import { Button } from '@heroui/button';
+import { Button, ButtonProps } from '@heroui/button';
 
-interface ButtonProp {
+interface CustomButtonProp extends Omit<ButtonProps, 'size' | 'variant'> {
     icon?: any;
     children: ReactNode;
 }
 
-const CustomButton = ({ icon, children }: ButtonProp) => {
+const CustomButton = ({ icon, children }: CustomButtonProp) => {
     return (
-
         <Button
-            //className="bg-[#F5F5F4] dark:bg-[#161513]"
-            color='default'
+            className="bg-[#E5E7EB] dark:bg-[#222222]"
+
             radius='lg'
             size='lg'
             variant='flat'

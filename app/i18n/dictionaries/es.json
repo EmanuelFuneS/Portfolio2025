@@ -2,13 +2,30 @@
     "navigation": {
         "about": "Sobre Mí",
         "experiences": "Experiencias",
-        "projects": "Projectos",
-        "techs": "Tecnologias",
+        "projects": "Proyectos",
+        "techs": "Tecnologías",
         "contact": "Contacto"
     },
-    "about": {},
-    "experiences": {},
-    "projects": {},
+    "about": {
+        "title": "",
+        "subtitle": "",
+        "downloadCv": "Descargar CV",
+        "contactMe": "Contactarme",
+        "experienceWith": "Experiencias con"
+    },
+    "experiences": {
+        "title": "Experiencias"
+    },
+    "projects": {
+        "title": "Proyectos"
+    },
     "techs": {},
-    "contact": {}
+    "contact": {
+        "title": "",
+        "subtitle": "",
+        "fullName": "Nombre Completo",
+        "email": "Correo Electrónico",
+        "message": "Déjame un mensaje",
+        "send": "Enviar"
+    }
 }

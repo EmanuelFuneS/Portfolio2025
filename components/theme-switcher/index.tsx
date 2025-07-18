@@ -1,9 +1,8 @@
+'use client'
 import React from 'react'
 import { useTheme } from 'next-themes'
 import { Switch } from '@heroui/switch'
 import { MoonIcon, SunIcon } from '@/utils/icons'
-
-
 
 const ThemeSwitcher = () => {
     const { setTheme, theme } = useTheme()

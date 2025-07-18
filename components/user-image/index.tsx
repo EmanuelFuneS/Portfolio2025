@@ -1,3 +1,4 @@
+
 import Image from 'next/image'
 import React from 'react'
 import userImage from '../../public/user.png'
@@ -11,7 +12,7 @@ const UserImage = (props: Props) => {
     return (
         <div className=''>
             <Image
-                src={theme === 'dark' ? userImageCustom : userImage}
+                src={theme === 'light' ? userImageCustom : userImage}
                 alt='Emanuel Funes'
                 className={`rounded-full object-cover aspect-auto w-[280px] h-[280px] ${theme === 'dark' ? 'scale-x-[-1]' : ''} transition-transform duration-300`}
                 priority

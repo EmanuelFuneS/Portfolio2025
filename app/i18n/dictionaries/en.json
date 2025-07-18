@@ -6,9 +6,26 @@
         "techs": "Techs",
         "contact": "Contact"
     },
-    "about": {},
-    "experiences": {},
-    "projects": {},
+    "about": {
+        "title": "",
+        "subtitle": "",
+        "downloadCv": "Download CV",
+        "contactMe": "Contact Me",
+        "experienceWith": "Experiences With"
+    },
+    "experiences": {
+        "title": "Experiences"
+    },
+    "projects": {
+        "title": "Projects"
+    },
     "techs": {},
-    "contact": {}
+    "contact": {
+        "title": "",
+        "subtitle": "",
+        "fullName": "Full Name",
+        "email": "Email",
+        "message": "Let me message",
+        "send": "Send"
+    }
 }
