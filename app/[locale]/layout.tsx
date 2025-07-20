@@ -43,13 +43,13 @@ export default async function RootLayout({
   return (
     <html lang={locale} suppressHydrationWarning>
       <body
-        className={`${exo2.variable} ${geistMono.variable} antialiased `}
+        className={`${exo2.variable} ${geistMono.variable} antialiased`}
       >
         <HeroUIProvider>
           <NextThemesProvider attribute="class" defaultTheme="dark">
             <I18nProvider dict={dict} locale={locale}>
               <NavBar />
-              <main className=" max-w-7xl mx-auto px-4 py-8  dark:bg-[#161513] text-foreground bg-background">
+              <main className=" max-w-7xl mx-auto px-4 py-8 dark:bg-[#161513] text-foreground bg-background">
                 {children}
               </main>
             </I18nProvider>

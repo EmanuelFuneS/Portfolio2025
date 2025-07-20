@@ -193,6 +193,21 @@
   resolved "https://registry.yarnpkg.com/@heroui/dom-animation/-/dom-animation-2.1.10.tgz#fa7a05cef4df35571f3ff2c92920bc1e993aeba6"
   integrity sha512-dt+0xdVPbORwNvFT5pnqV2ULLlSgOJeqlg/DMo97s9RWeD6rD4VedNY90c8C9meqWqGegQYBQ9ztsfX32mGEPA==
 
+"@heroui/dropdown@^2.3.23":
+  version "2.3.23"
+  resolved "https://registry.yarnpkg.com/@heroui/dropdown/-/dropdown-2.3.23.tgz#a30fb4159e591adf255e1cd92c1a56a6cc532127"
+  integrity sha512-2m/HAWSwSv8yfwtJaelQGV7S71sA3VuI9eJlvC7cTQ5/+M+9X4tbze935OZ32Rd95gtaxA4V2odVAu3ba7qC5w==
+  dependencies:
+    "@heroui/aria-utils" "2.2.20"
+    "@heroui/menu" "2.2.22"
+    "@heroui/popover" "2.3.23"
+    "@heroui/react-utils" "2.1.12"
+    "@heroui/shared-utils" "2.1.10"
+    "@react-aria/focus" "3.20.5"
+    "@react-aria/menu" "3.18.5"
+    "@react-stately/menu" "3.9.5"
+    "@react-types/menu" "3.10.2"
+
 "@heroui/form@2.1.23", "@heroui/form@^2.1.23":
   version "2.1.23"
   resolved "https://registry.yarnpkg.com/@heroui/form/-/form-2.1.23.tgz#768380e263eeaae80dad380a799712cb731474ac"
@@ -256,6 +271,23 @@
     "@react-stately/list" "3.12.3"
     "@react-types/shared" "3.30.0"
     "@tanstack/react-virtual" "3.11.3"
+
+"@heroui/menu@2.2.22":
+  version "2.2.22"
+  resolved "https://registry.yarnpkg.com/@heroui/menu/-/menu-2.2.22.tgz#1c4890266ed9aade2c22459f27b8d8d9af523d2e"
+  integrity sha512-locrpJLTsaHAnTBW5hPscExfH2JnWhc3Hbmr3w36zkPcQhqh6XFJjEt7ElJJbPjFvI7d/OxSWC8eq5MxUzID5w==
+  dependencies:
+    "@heroui/aria-utils" "2.2.20"
+    "@heroui/divider" "2.2.16"
+    "@heroui/react-utils" "2.1.12"
+    "@heroui/shared-utils" "2.1.10"
+    "@heroui/use-is-mobile" "2.2.11"
+    "@react-aria/focus" "3.20.5"
+    "@react-aria/interactions" "3.25.3"
+    "@react-aria/menu" "3.18.5"
+    "@react-stately/tree" "3.9.0"
+    "@react-types/menu" "3.10.2"
+    "@react-types/shared" "3.30.0"
 
 "@heroui/popover@2.3.23":
   version "2.3.23"
@@ -1065,7 +1097,7 @@
     "@react-types/shared" "^3.30.0"
     "@swc/helpers" "^0.5.0"
 
-"@react-stately/tree@^3.9.0":
+"@react-stately/tree@3.9.0", "@react-stately/tree@^3.9.0":
   version "3.9.0"
   resolved "https://registry.yarnpkg.com/@react-stately/tree/-/tree-3.9.0.tgz#1e10e2909b627755e64d26edfde286e4651f7302"
   integrity sha512-VpWAh36tbMHJ1CtglPQ81KPdpCfqFz9yAC6nQuL1x6Tmbs9vNEKloGILMI9/4qLzC+3nhCVJj6hN+xqS5/cMTg==
@@ -1119,7 +1151,7 @@
   dependencies:
     "@react-types/shared" "^3.30.0"
 
-"@react-types/menu@^3.10.2":
+"@react-types/menu@3.10.2", "@react-types/menu@^3.10.2":
   version "3.10.2"
   resolved "https://registry.yarnpkg.com/@react-types/menu/-/menu-3.10.2.tgz#b29ba2443b46bad3e237499c9fc98c3a05e3f72e"
   integrity sha512-TVQFGttaNCcIvy1MKavb9ZihJmng46uUtVF9oTG/VI/C4YEdzekteI6iSsXbjv5ZAvOKQR+S25IWCbK2W0YCjQ==

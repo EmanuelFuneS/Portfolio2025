@@ -12,21 +12,15 @@ const LanguageSwitched = () => {
     const changeLanguage = (newLocale: string) => {
 
         const segments = pathname.split('/')
-
-
         segments[1] = newLocale
-
-
         const newPath = segments.join('/')
-
-
         router.push(newPath)
     }
 
     console.log(locale)
     return (
-        <div className='min-w-20'>
-            <Select defaultSelectedKeys={[locale]}
+        <div className='w-20'>
+            <Select defaultSelectedKeys={locale}
                 color='default'
                 name="language" id="lang" onChange={(e) => changeLanguage(e.target.value)}>
                 <SelectItem key={'en'}>EN</SelectItem>

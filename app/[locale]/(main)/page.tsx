@@ -28,7 +28,7 @@ const Page = ({ params }: { params: Promise<{ locale: string }> }) => {
     */
 
     return (
-        <div className="flex flex-col items-center justify-center gap-10 h-11/12">
+        <div className="flex flex-col items-center justify-center gap-10 px-10 m-10 h-11/12 " style={{ minHeight: 'calc(100vh - 250px)' }}>
             <UserImage />
             <Typography as="h1" variant='headline'>I do code and
                 make content about it!</Typography>

@@ -3,7 +3,7 @@ import React from 'react'
 
 const Page = () => {
     return (
-        <div className='w-auto flex flex-wrap justify-center items-center m-10 px-10 '>
+        <div className='flex flex-wrap items-center justify-center w-auto px-10 m-10 ' >
             
             <CardProject />
             <CardProject />
