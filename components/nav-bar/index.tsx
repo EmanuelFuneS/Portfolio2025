@@ -35,7 +35,7 @@ const NavBar = () => {
                         <Typography as='span' variant='nav-link' >Contact</Typography>
                     </Link>
                 </div>
-                <div className='flex items-center justify-center gap-4'>
+                <div className='flex items-center justify-center gap-4 '>
                     <ThemeSwitcher />
                     <LanguageSwitched />
                 </div>
