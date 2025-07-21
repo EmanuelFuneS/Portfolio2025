@@ -11,7 +11,7 @@ interface CardExperienceProps {
 
 const CardExperience = ({ rol, timeLine, description }: CardExperienceProps) => {
     return (
-        <Card>
+        <Card className='bg-[#E5E7EB] dark:bg-[#222222] p-4'>
             <CardHeader className='flex justify-between'>
                 <Typography as="h2" variant='headline'>{rol}</Typography>
                 <TimeLine timeline={timeLine} />

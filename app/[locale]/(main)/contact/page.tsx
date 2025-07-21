@@ -10,7 +10,7 @@ import React from 'react'
 const Page = () => {
     return (
         <div className='flex items-center justify-center ' style={{ minHeight: 'calc(100vh - 150px)' }}>
-            <Card className='w-full md:p-8 md:w-1/2'>
+            <Card className='w-full md:p-8 md:w-1/2 bg-[#E5E7EB] dark:bg-[#222222]'>
                 <CardHeader>
                     <Typography as='h1' variant='headline' >
                         Please let me a Message
