@@ -1,8 +1,6 @@
 import React from 'react'
 
-type Props = {}
-
-const ContactForm = (props: Props) => {
+const ContactForm = () => {
     return (
         <div>ContactForm</div>
     )

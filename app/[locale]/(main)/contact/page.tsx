@@ -5,15 +5,20 @@ import { Card, CardBody, CardHeader } from '@heroui/card';
 import { Form } from '@heroui/form';
 import { Input, Textarea } from '@heroui/input';
 import React from 'react'
+import { useI18n } from '@/app/i18n/context';
 
 
 const Page = () => {
+    const { dict } = useI18n()
     return (
         <div className='flex items-center justify-center ' style={{ minHeight: 'calc(100vh - 150px)' }}>
             <Card className='w-full md:p-8 md:w-1/2 bg-[#E5E7EB] dark:bg-[#222222]'>
-                <CardHeader>
+                <CardHeader className='flex flex-col'>
                     <Typography as='h1' variant='headline' >
-                        Please let me a Message
+                        {dict.contact.title}
+                    </Typography>
+                    <Typography as='h2' variant='subline' >
+                        {dict.contact.subtitle}
                     </Typography>
 
                 </CardHeader>
@@ -24,10 +29,10 @@ const Page = () => {
                             variant='faded'
                             isRequired
                             errorMessage="Pleas enter a email"
-                            label="Email"
+                            label={dict.contact.email}
                             labelPlacement="outside"
                             name="email"
-                            placeholder="Enter your Email"
+                            placeholder={dict.contact.email}
                             type="email"
 
                         />
@@ -35,10 +40,10 @@ const Page = () => {
                             variant='faded'
                             isRequired
                             errorMessage="Pleas enter your full name"
-                            label="Full Name"
+                            label={dict.contact.fullName}
                             labelPlacement="outside"
                             name="fullname"
-                            placeholder="Enter your Full name"
+                            placeholder={dict.contact.fullName}
                             type="string"
 
                         />
@@ -49,12 +54,12 @@ const Page = () => {
                             label="Message"
                             labelPlacement="outside"
                             name="message"
-                            placeholder="Enter your Message"
+                            placeholder={dict.contact.message}
                             type="text"
 
                         />
                         <CustomButton type='submit'>
-                            Submit
+                            {dict.contact.send}
                         </CustomButton>
                     </Form>
                 </CardBody>

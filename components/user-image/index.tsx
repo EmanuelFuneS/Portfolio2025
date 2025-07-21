@@ -5,9 +5,7 @@ import userImage from '../../public/user.png'
 import userImageCustom from "../../public/userCustom.png"
 import { useTheme } from 'next-themes'
 
-type Props = {}
-
-const UserImage = (props: Props) => {
+const UserImage = () => {
     const { theme } = useTheme()
     return (
         <div className=''>

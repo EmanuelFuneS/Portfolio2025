@@ -5,9 +5,44 @@ import { createContext, useContext, ReactNode } from 'react'
 
 type Dictionary = {
     navigation: {
-        about: string
+        about: string;
+        experiences: string;
+        projects: string;
+        techs: string;
+        contact: string;
     }
     about: {
+        title: string;
+        aboutMe: string;
+        downloadCv: string;
+        contactMe: string
+        experienceWith: string;
+    }
+    experiences: {
+        title: string;
+        experienceOne: {
+            title: string;
+            timeline: string;
+            description: string;
+        },
+        experienceTwo: {
+            title: string;
+            timeline: string;
+            description: string;
+        },
+        experienceTree: {
+            title: string;
+            timeline: string;
+            description: string;
+        }
+    }
+    contact: {
+        title: string;
+        subtitle: string;
+        fullName: string;
+        email: string;
+        message: string;
+        send: string;
     }
 }
 

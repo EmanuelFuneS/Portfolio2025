@@ -1,8 +1,7 @@
 'use client';
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { Select, SelectItem } from '@heroui/select'
 import { useI18n } from '@/app/i18n/context'
-import { locales } from '@/app/i18n'
 import { useRouter, usePathname } from 'next/navigation'
 import { US, ES } from 'country-flag-icons/react/3x2'
 import Typography from '../ui/typography';
