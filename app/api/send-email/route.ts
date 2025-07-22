@@ -17,7 +17,7 @@ export async function POST(request: NextRequest) {
 
         const contactTemplate = emailTemplates.contact({ fullname, email, message })
         const contactResult = await sendEmail({
-            to: process.env.CONTACT_EMAIL || process.env.EMAIL_USER!,
+            to: process.env.EMAIL_TO!,
             subject: contactTemplate.subject,
             html: contactTemplate.html,
             text: contactTemplate.text,
