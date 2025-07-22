@@ -35,7 +35,7 @@ const Page = () => {
             if (response.ok) {
                 setSubmitStatus('success')
                 addToast({
-                    title: "Message sending",
+                    title: `Message sending: STATUS (${submitStatus})`,
                     color: "success"
                 })
             } else {
@@ -54,6 +54,8 @@ const Page = () => {
             setIsSubmitting(false)
         }
     }
+
+    console.log(isSubmitting)
 
     return (
         <div className='flex items-center justify-center ' style={{ minHeight: 'calc(100vh - 150px)' }}>

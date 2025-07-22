@@ -4,7 +4,7 @@ import { sendEmail, emailTemplates } from '@/lib/mailer-send';
 export async function POST(request: NextRequest) {
     try {
 
-        const { fullname, email, message, locale } = await request.json()
+        const { fullname, email, message } = await request.json()
 
         if (!fullname || !email || !message) {
             return NextResponse.json({ error: 'Missing required fields' }, { status: 400 })
