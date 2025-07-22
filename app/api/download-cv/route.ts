@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from "next/server";
+import { NextResponse } from "next/server";
 import fs from 'fs';
 import path from 'path';
 
@@ -25,6 +25,6 @@ export async function GET() {
         });
 
     } catch (error) {
-        return NextResponse.json({ error: 'Internal Server Error' }, { status: 500 })
+        return NextResponse.json({ error: `Internal server Error: ${error}` }, { status: 500 })
     }
 }
