@@ -40,6 +40,7 @@
         "subtitle": "I'd love to know more details and see how we can work together to make it happen.",
         "fullName": "Full Name",
         "email": "Email",
+        "messageLabel": "Message",
         "message": "Let me message",
         "send": "Send"
     }

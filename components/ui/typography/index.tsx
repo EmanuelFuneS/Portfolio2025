@@ -21,7 +21,7 @@ const Typography = ({ as = 'p', variant = "paragraph", className = '', children,
             case 'headline':
                 return 'text-3xl font-bold leading-tight text-center';
             case 'subline':
-                return 'text-lg font-medium text-gray-600';
+                return 'text-lg font-medium leading-tight text-gray-600 text-center';
             case 'paragraph':
                 return 'text-md leading-relaxed text-center';
             case 'nav-link':

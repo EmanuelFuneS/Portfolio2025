@@ -6,6 +6,7 @@ import { Card, CardBody, CardHeader } from '@heroui/card';
 import { Form } from '@heroui/form';
 import { Input, Textarea } from '@heroui/input';
 import { useI18n } from '@/app/i18n/context';
+import { addToast } from '@heroui/toast';
 
 
 const Page = () => {
@@ -14,7 +15,7 @@ const Page = () => {
     const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
 
 
-    const onSubmit = async (e) => {
+    const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
         const data = Object.fromEntries(new FormData(e.currentTarget));
@@ -33,10 +34,16 @@ const Page = () => {
 
             if (response.ok) {
                 setSubmitStatus('success')
-                alert('Enviado')
+                addToast({
+                    title: "Message sending",
+                    color: "success"
+                })
             } else {
                 setSubmitStatus('error')
-                alert('error')
+                addToast({
+                    title: "Error to send message",
+                    color: "danger"
+                })
             }
 
 
@@ -89,7 +96,7 @@ const Page = () => {
                             variant='faded'
                             isRequired
                             errorMessage="Pleas enter a Message"
-                            label="Message"
+                            label={dict.contact.messageLabel}
                             labelPlacement="outside"
                             name="message"
                             placeholder={dict.contact.message}

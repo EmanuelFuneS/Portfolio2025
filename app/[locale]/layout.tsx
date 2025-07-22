@@ -8,6 +8,7 @@ import { getDictionary } from '../i18n'
 import { I18nProvider } from '../i18n/context'
 
 import { HeroUIProvider } from "@heroui/system";
+import { ToastProvider } from "@heroui/toast";
 
 
 const exo2 = Exo_2({
@@ -48,6 +49,7 @@ export default async function RootLayout({
         <HeroUIProvider>
           <NextThemesProvider attribute="class" defaultTheme="dark">
             <I18nProvider dict={dict} locale={locale}>
+              <ToastProvider/>
               <NavBar />
               <main className=" max-w-7xl mx-auto px-4 py-8 dark:bg-[#161513] text-foreground bg-background">
                 {children}

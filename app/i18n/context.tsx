@@ -41,6 +41,7 @@ type Dictionary = {
         subtitle: string;
         fullName: string;
         email: string;
+        messageLabel: string;
         message: string;
         send: string;
     }

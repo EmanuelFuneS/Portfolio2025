@@ -40,6 +40,7 @@
         "subtitle": "Me encantaría conocer más detalles y ver cómo podemos trabajar juntos para hacerlo realidad.",
         "fullName": "Nombre Completo",
         "email": "Correo Electrónico",
+        "messageLabel": "Mensaje",
         "message": "Déjame un mensaje",
         "send": "Enviar"
     }
