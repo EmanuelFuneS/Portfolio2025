@@ -1,25 +1,7 @@
 import nodemailer from 'nodemailer';
+import { Resend } from 'resend';
 
-export const createTransport = () => {
-    return nodemailer.createTransport({
-        service: 'gmail',
-        auth: {
-            user: process.env.EMAIL_USER,
-            pass: process.env.EMAIL_PASS
-        },
-
-        /* 
-        SMTP SERVICE:
-        host: process.env.SMTP_HOST,
-        port: parseInt(process.env.SMTP_PORT || '587'),
-        secure: false,
-        auth: {
-            user: process.env.EMAIL_USER,
-            pass: process.env.EMAIL_PASS
-        }, */
-
-    })
-}
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 
 export interface EmailData {
@@ -39,41 +21,41 @@ export interface EmailData {
 
 export const sendEmail = async (emailData: EmailData) => {
     try {
-        const transporter = createTransport()
-
         const mailOptions = {
-            from: emailData.from || process.env.EMAIL_FROM || process.env.EMAIL_USER,
-            to: emailData.to,
+            from: process.env.EMAIL_FROM!,
+            to: process.env.EMAIL_TO!,
             subject: emailData.subject,
-            text: emailData.text,
-            html: emailData.html,
-            replyTo: emailData.replyTo,
-            attachments: emailData.attachments,
+            text: emailData.text || emailData.html?.replace(/<[^>]*>/g, '') || 'Sin contenido', // Extrae texto del HTML como fallback
+            ...(emailData.html && { html: emailData.html }),
+            ...(emailData.replyTo && { replyTo: emailData.replyTo }),
+            ...(emailData.attachments && emailData.attachments.length > 0 && { attachments: emailData.attachments }), // Cambio: attachments (plural)
         }
 
-        const result = await transporter.sendMail(mailOptions)
-        console.log('Email sent successfully: ', result.messageId)
+        const { data, error } = await resend.emails.send(mailOptions);
 
-        return { success: true, messageId: result.messageId }
+        if (error) {
+            console.error('Resend API error:', error);
+            return { success: false, error: error.message || 'Error from Resend API' };
+        }
+
+        console.log('Email sent successfully: ', data?.id);
+        return { success: true, messageId: data?.id };
 
     } catch (error) {
-
         console.error('Error sending email: ', error);
-        return { success: false, error: error instanceof Error ? error.message : 'Unknown error' }
+        return { success: false, error: error instanceof Error ? error.message : 'Unknown error' };
     }
 }
-
-
 export const emailTemplates = {
-    contact: (data: { name: string; email: string; message: string; locale: string }) => ({
-        subject: `Nuevo mensaje de contacto de ${data.name}`,
+    contact: (data: { fullname: string; email: string; message: string; }) => ({
+        subject: `Nuevo mensaje de contacto de ${data.fullname}`,
         html: `
       <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
         <h2 style="color: #333;">Nuevo mensaje de contacto</h2>
         <div style="background: #f9f9f9; padding: 20px; border-radius: 8px; margin: 20px 0;">
-          <p><strong>Nombre:</strong> ${data.name}</p>
+          <p><strong>Nombre:</strong> ${data.fullname}</p>
           <p><strong>Email:</strong> ${data.email}</p>
-          <p><strong>Idioma:</strong> ${data.locale}</p>
+
         </div>
         <div style="margin: 20px 0;">
           <h3>Mensaje:</h3>
@@ -90,43 +72,11 @@ export const emailTemplates = {
         text: `
       Nuevo mensaje de contacto
       
-      Nombre: ${data.name}
+      Nombre Completo: ${data.fullname}
       Email: ${data.email}
-      Idioma: ${data.locale}
       
       Mensaje:
       ${data.message}
     `
-    }),
-
-    autoResponse: (data: { name: string; locale: string }) => {
-        const messages = {
-            en: {
-                subject: 'Thank you for your message',
-                html: `
-          <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-            <h2 style="color: #333;">Thank you, ${data.name}!</h2>
-            <p>I have received your message and I will get back to you as soon as possible.</p>
-            <p>Best regards,</p>
-            <p><strong>Your Name</strong></p>
-          </div>
-        `,
-                text: `Thank you, ${data.name}!\n\nI have received your message and I will get back to you as soon as possible.\n\nBest regards,\nYour Name`
-            },
-            es: {
-                subject: 'Gracias por tu mensaje',
-                html: `
-          <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-            <h2 style="color: #333;">¡Gracias, ${data.name}!</h2>
-            <p>He recibido tu mensaje y te responderé tan pronto como sea posible.</p>
-            <p>Saludos cordiales,</p>
-            <p><strong>Tu Nombre</strong></p>
-          </div>
-        `,
-                text: `¡Gracias, ${data.name}!\n\nHe recibido tu mensaje y te responderé tan pronto como sea posible.\n\nSaludos cordiales,\nTu Nombre`
-            }
-        }
-
-        return messages[data.locale as keyof typeof messages] || messages.en
-    }
+    })
 }

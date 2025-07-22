@@ -1,15 +1,53 @@
 'use client';
+import React, { useState } from 'react'
 import CustomButton from '@/components/ui/button';
 import Typography from '@/components/ui/typography';
 import { Card, CardBody, CardHeader } from '@heroui/card';
 import { Form } from '@heroui/form';
 import { Input, Textarea } from '@heroui/input';
-import React from 'react'
 import { useI18n } from '@/app/i18n/context';
 
 
 const Page = () => {
-    const { dict } = useI18n()
+    const { dict, locale } = useI18n()
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
+
+
+    const onSubmit = async (e) => {
+        e.preventDefault();
+
+        const data = Object.fromEntries(new FormData(e.currentTarget));
+        try {
+            const response = await fetch('/api/send-email', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    ...data,
+                    locale
+                })
+            })
+
+
+            if (response.ok) {
+                setSubmitStatus('success')
+                alert('Enviado')
+            } else {
+                setSubmitStatus('error')
+                alert('error')
+            }
+
+
+        } catch (error) {
+            console.error('Error: ', error);
+            setSubmitStatus('error')
+        } finally {
+            setIsSubmitting(false)
+        }
+    }
+
     return (
         <div className='flex items-center justify-center ' style={{ minHeight: 'calc(100vh - 150px)' }}>
             <Card className='w-full md:p-8 md:w-1/2 bg-[#E5E7EB] dark:bg-[#222222]'>
@@ -24,7 +62,7 @@ const Page = () => {
                 </CardHeader>
                 <CardBody>
 
-                    <Form >
+                    <Form onSubmit={onSubmit}>
                         <Input
                             variant='faded'
                             isRequired
