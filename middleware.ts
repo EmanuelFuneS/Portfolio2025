@@ -4,6 +4,10 @@ import type { NextRequest } from 'next/server'
 import { locales, defaultLocale } from './app/i18n'
 
 function getLocale(request: NextRequest): string {
+    const localeCookie = request.cookies.get('NEXT_LOCALE')
+    if (localeCookie && locales.includes(localeCookie.value as any)) {
+        return localeCookie.value
+    }
     const acceptLanguage = request.headers.get('accept-language')
     if (acceptLanguage) {
         const preferredLocale = acceptLanguage
@@ -25,10 +29,35 @@ export function middleware(request: NextRequest) {
 
     if (pathnameIsMissingLocale) {
         const locale = getLocale(request)
-        return NextResponse.redirect(
+        const response = NextResponse.redirect(
             new URL(`/${locale}${pathname}`, request.url)
         )
+
+        response.cookies.set('NEXT_LOCALE', locale, {
+            maxAge: 365 * 24 * 60 * 60, // 1 año
+            httpOnly: false,
+            sameSite: 'lax',
+            path: '/'
+        })
+
+        return response
     }
+
+    const currentLocale = pathname.split('/')[1]
+    if (locales.includes(currentLocale as any)) {
+        const response = NextResponse.next()
+        
+        response.cookies.set('NEXT_LOCALE', currentLocale, {
+            maxAge: 365 * 24 * 60 * 60,
+            httpOnly: false,
+            sameSite: 'lax',
+            path: '/'
+        })
+
+        return response
+    }
+
+    return NextResponse.next()
 }
 
 export const config = {
