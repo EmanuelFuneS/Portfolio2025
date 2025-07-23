@@ -12,7 +12,7 @@ const Page = () => {
     const { dict } = useI18n();
 
     return (
-        <div className="flex flex-col items-center justify-center gap-10 px-10 m-10 h-11/12 " style={{ minHeight: 'calc(100vh - 250px)' }}>
+        <div className="flex flex-col items-center justify-center gap-10 md:px-10 md:m-10 h-11/12 " style={{ minHeight: 'calc(100vh - 250px)' }}>
             <UserImage />
             <Typography as="h1" variant='headline'>{dict.about.title}</Typography>
             <Typography as="p" variant='paragraph'>{dict.about.aboutMe}</Typography>
