@@ -1,47 +1,47 @@
 {
-    "navigation": {
-        "about": "About",
-        "experiences": "Experiences",
-        "projects": "Projects",
-        "techs": "Techs",
-        "contact": "Contact"
+  "navigation": {
+    "about": "About",
+    "experiences": "Experiences",
+    "projects": "Projects",
+    "techs": "Techs",
+    "contact": "Contact"
+  },
+  "about": {
+    "title": "Hi Iam Emanuel Funes",
+    "aboutMe": "I am a Full Stack Web developer, I master technologies such as React and Next.js for the Frontend, and Express, SQL and MongoDB for the Backend. I stand out for my speed in learning new technologies, efficiency in solving problems and ability to collaborate in teams. I am looking for new challenges to continue growing professionally and contribute to the success of dynamic and innovative technology projects. Translated with DeepL.com (free version)",
+    "downloadCv": "Download CV",
+    "contactMe": "Contact Me",
+    "experienceWith": "Experiences With"
+  },
+  "experiences": {
+    "title": "Experiences",
+    "experienceOne": {
+      "title": "",
+      "timeline": "",
+      "description": ""
     },
-    "about": {
-        "title": "Hi Iam Emanuel Funes",
-        "aboutMe": "I am a Full Stack Web developer, I master technologies such as React and Next.js for the Frontend, and Express, SQL and MongoDB for the Backend. I stand out for my speed in learning new technologies, efficiency in solving problems and ability to collaborate in teams. I am looking for new challenges to continue growing professionally and contribute to the success of dynamic and innovative technology projects. Translated with DeepL.com (free version)",
-        "downloadCv": "Download CV",
-        "contactMe": "Contact Me",
-        "experienceWith": "Experiences With"
+    "experienceTwo": {
+      "title": "",
+      "timeline": "",
+      "description": ""
     },
-    "experiences": {
-        "title": "Experiences",
-        "experienceOne": {
-            "title": "",
-            "timeline": "",
-            "description": ""
-        },
-        "experienceTwo": {
-            "title": "",
-            "timeline": "",
-            "description": ""
-        },
-        "experienceTree": {
-            "title": "",
-            "timeline": "",
-            "description": ""
-        }
-    },
-    "projects": {
-        "title": "Projects"
-    },
-    "techs": {},
-    "contact": {
-        "title": "Do you have a project in mind? ",
-        "subtitle": "I'd love to know more details and see how we can work together to make it happen.",
-        "fullName": "Full Name",
-        "email": "Email",
-        "messageLabel": "Message",
-        "message": "Let me message",
-        "send": "Send"
+    "experienceTree": {
+      "title": "",
+      "timeline": "",
+      "description": ""
     }
+  },
+  "projects": {
+    "title": "Projects"
+  },
+  "techs": {},
+  "contact": {
+    "title": "Do you have a project in mind? ",
+    "subtitle": "I'd love to know more details and see how we can work together to make it happen.",
+    "fullName": "Full Name",
+    "email": "Email",
+    "messageLabel": "Message",
+    "message": "Let me message",
+    "send": "Send"
+  }
 }

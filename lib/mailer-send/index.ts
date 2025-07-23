@@ -1,54 +1,61 @@
-import { Resend } from 'resend';
+import { Resend } from 'resend'
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
+const resend = new Resend(process.env.RESEND_API_KEY)
 
 export interface EmailData {
-    to: string;
-    subject: string;
-    text?: string;
-    html?: string;
-    from?: string;
-    replyTo?: string;
-    attachments?: Array<{
-        filename: string;
-        path?: string;
-        content?: Buffer;
-        contentType?: string
-    }>
+  to: string
+  subject: string
+  text?: string
+  html?: string
+  from?: string
+  replyTo?: string
+  attachments?: Array<{
+    filename: string
+    path?: string
+    content?: Buffer
+    contentType?: string
+  }>
 }
 
 export const sendEmail = async (emailData: EmailData) => {
-    try {
-        const mailOptions = {
-            from: process.env.EMAIL_FROM!,
-            to: process.env.EMAIL_TO!,
-            subject: emailData.subject,
-            text: emailData.text || emailData.html?.replace(/<[^>]*>/g, '') || 'Sin contenido', // Extrae texto del HTML como fallback
-            ...(emailData.html && { html: emailData.html }),
-            ...(emailData.replyTo && { replyTo: emailData.replyTo }),
-            ...(emailData.attachments && emailData.attachments.length > 0 && { attachments: emailData.attachments }), // Cambio: attachments (plural)
-        }
-
-        const { data, error } = await resend.emails.send(mailOptions);
-
-        if (error) {
-            console.error('Resend API error:', error);
-            return { success: false, error: error.message || 'Error from Resend API' };
-        }
-
-        console.log('Email sent successfully: ', data?.id);
-        return { success: true, messageId: data?.id };
-
-    } catch (error) {
-        console.error('Error sending email: ', error);
-        return { success: false, error: error instanceof Error ? error.message : 'Unknown error' };
+  try {
+    const mailOptions = {
+      from: process.env.EMAIL_FROM!,
+      to: process.env.EMAIL_TO!,
+      subject: emailData.subject,
+      text:
+        emailData.text ||
+        emailData.html?.replace(/<[^>]*>/g, '') ||
+        'Sin contenido', // Extrae texto del HTML como fallback
+      ...(emailData.html && { html: emailData.html }),
+      ...(emailData.replyTo && { replyTo: emailData.replyTo }),
+      ...(emailData.attachments &&
+        emailData.attachments.length > 0 && {
+          attachments: emailData.attachments,
+        }), // Cambio: attachments (plural)
     }
+
+    const { data, error } = await resend.emails.send(mailOptions)
+
+    if (error) {
+      console.error('Resend API error:', error)
+      return { success: false, error: error.message || 'Error from Resend API' }
+    }
+
+    console.log('Email sent successfully: ', data?.id)
+    return { success: true, messageId: data?.id }
+  } catch (error) {
+    console.error('Error sending email: ', error)
+    return {
+      success: false,
+      error: error instanceof Error ? error.message : 'Unknown error',
+    }
+  }
 }
 export const emailTemplates = {
-    contact: (data: { fullname: string; email: string; message: string; }) => ({
-        subject: `Nuevo mensaje de contacto de ${data.fullname}`,
-        html: `
+  contact: (data: { fullname: string; email: string; message: string }) => ({
+    subject: `Nuevo mensaje de contacto de ${data.fullname}`,
+    html: `
       <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
         <h2 style="color: #333;">Nuevo mensaje de contacto</h2>
         <div style="background: #f9f9f9; padding: 20px; border-radius: 8px; margin: 20px 0;">
@@ -68,7 +75,7 @@ export const emailTemplates = {
         </p>
       </div>
     `,
-        text: `
+    text: `
       Nuevo mensaje de contacto
       
       Nombre Completo: ${data.fullname}
@@ -76,6 +83,6 @@ export const emailTemplates = {
       
       Mensaje:
       ${data.message}
-    `
-    })
+    `,
+  }),
 }

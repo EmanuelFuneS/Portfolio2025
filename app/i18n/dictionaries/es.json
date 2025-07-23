@@ -1,47 +1,47 @@
 {
-    "navigation": {
-        "about": "Sobre Mí",
-        "experiences": "Experiencias",
-        "projects": "Proyectos",
-        "techs": "Tecnologías",
-        "contact": "Contacto"
+  "navigation": {
+    "about": "Sobre Mí",
+    "experiences": "Experiencias",
+    "projects": "Proyectos",
+    "techs": "Tecnologías",
+    "contact": "Contacto"
+  },
+  "about": {
+    "title": "Hola me llamo Emanuel Funes!",
+    "aboutMe": "Soy un desarrollador Full Stack Web Domino tecnologías como React y Next.js para el Frontend, y Express, SQL y MongoDB para el Backend. Destaco por mi rapidez en aprender nuevas tecnologías, eficiencia en resolver problemas y habilidad para colaborar en equipos. Busco nuevos desafíos para seguir creciendo profesionalmente y aportar al éxito de proyectos tecnológicos dinámicos e innovadores.",
+    "downloadCv": "Descargar CV",
+    "contactMe": "Contactarme",
+    "experienceWith": "Experiencias con"
+  },
+  "experiences": {
+    "title": "Experiencias",
+    "experienceOne": {
+      "title": "Frontend React",
+      "timeline": "",
+      "description": "Participe en el desarrollo de una aplicación web de apuestas, implementando diseños preestablecidos y conexiones con API, usando Tecnologías: React, TS, Vite, CSS."
     },
-    "about": {
-        "title": "Hola me llamo Emanuel Funes!",
-        "aboutMe": "Soy un desarrollador Full Stack Web Domino tecnologías como React y Next.js para el Frontend, y Express, SQL y MongoDB para el Backend. Destaco por mi rapidez en aprender nuevas tecnologías, eficiencia en resolver problemas y habilidad para colaborar en equipos. Busco nuevos desafíos para seguir creciendo profesionalmente y aportar al éxito de proyectos tecnológicos dinámicos e innovadores.",
-        "downloadCv": "Descargar CV",
-        "contactMe": "Contactarme",
-        "experienceWith": "Experiencias con"
+    "experienceTwo": {
+      "title": "Full Stack",
+      "timeline": "",
+      "description": "Participe en el desarrollo de una aplicación Web de Agentes de IA, realizando tareas tanto backend como en el front end con las tecnologías: Next, Express, Chakraui, Tailwind, TS, KNEX ORM, MYSQL  "
     },
-    "experiences": {
-        "title": "Experiencias",
-        "experienceOne": {
-            "title": "Frontend React",
-            "timeline": "",
-            "description": "Participe en el desarrollo de una aplicación web de apuestas, implementando diseños preestablecidos y conexiones con API, usando Tecnologías: React, TS, Vite, CSS."
-        },
-        "experienceTwo": {
-            "title": "Full Stack",
-            "timeline": "",
-            "description": "Participe en el desarrollo de una aplicación Web de Agentes de IA, realizando tareas tanto backend como en el front end con las tecnologías: Next, Express, Chakraui, Tailwind, TS, KNEX ORM, MYSQL  "
-        },
-        "experienceTree": {
-            "title": "Full Stack",
-            "timeline": "",
-            "description": " con las tecnologías: Next.js, ShadCN/Ui, TypeScript, TanStack, Nest.js, MongoDB, Prisma, Strapi."
-        }
-    },
-    "projects": {
-        "title": "Proyectos"
-    },
-    "techs": {},
-    "contact": {
-        "title": "¿Tienes un proyecto en mente?",
-        "subtitle": "Me encantaría conocer más detalles y ver cómo podemos trabajar juntos para hacerlo realidad.",
-        "fullName": "Nombre Completo",
-        "email": "Correo Electrónico",
-        "messageLabel": "Mensaje",
-        "message": "Déjame un mensaje",
-        "send": "Enviar"
+    "experienceTree": {
+      "title": "Full Stack",
+      "timeline": "",
+      "description": " con las tecnologías: Next.js, ShadCN/Ui, TypeScript, TanStack, Nest.js, MongoDB, Prisma, Strapi."
     }
+  },
+  "projects": {
+    "title": "Proyectos"
+  },
+  "techs": {},
+  "contact": {
+    "title": "¿Tienes un proyecto en mente?",
+    "subtitle": "Me encantaría conocer más detalles y ver cómo podemos trabajar juntos para hacerlo realidad.",
+    "fullName": "Nombre Completo",
+    "email": "Correo Electrónico",
+    "messageLabel": "Mensaje",
+    "message": "Déjame un mensaje",
+    "send": "Enviar"
+  }
 }

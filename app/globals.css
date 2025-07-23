@@ -1,15 +1,15 @@
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 
 input:focus {
-    outline: none;
-    border: none;
-    box-shadow: none;
+  outline: none;
+  border: none;
+  box-shadow: none;
 }
 
-textarea:focus{
-     outline: none;
-    border: none;
-    box-shadow: none;
+textarea:focus {
+  outline: none;
+  border: none;
+  box-shadow: none;
 }
