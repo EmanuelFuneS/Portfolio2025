@@ -68,15 +68,7 @@ const NavBar = () => {
               alt='Emanuel Funes'
             />
           </div>
-          <Dropdown
-            placement='bottom-end'
-            shouldBlockScroll={false}
-            classNames={{
-              base: 'before:bg-default-200',
-              content:
-                'py-1 px-1 border border-default-200 bg-gradient-to-br from-white to-default-200 dark:from-default-50 dark:to-black',
-            }}
-          >
+          <Dropdown>
             <DropdownTrigger>
               <Button variant='flat' aria-label='Menu'>
                 <CiMenuBurger size={20} />
