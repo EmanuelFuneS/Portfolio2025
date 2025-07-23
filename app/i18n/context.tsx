@@ -29,7 +29,7 @@ type Dictionary = {
       timeline: string
       description: string
     }
-    experienceTree: {
+    experienceThree: {
       title: string
       timeline: string
       description: string

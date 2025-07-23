@@ -16,19 +16,19 @@
   "experiences": {
     "title": "Experiencias",
     "experienceOne": {
-      "title": "Frontend React",
-      "timeline": "",
-      "description": "Participe en el desarrollo de una aplicación web de apuestas, implementando diseños preestablecidos y conexiones con API, usando Tecnologías: React, TS, Vite, CSS."
+      "title": "Desarrollador Frontend React",
+      "timeline": "Febrero - Mayo 2024",
+      "description": "Participé en el desarrollo de una aplicación web de apuestas deportivas, implementando interfaces de usuario responsivas basadas en diseños preestablecidos y desarrollando integraciones con APIs REST. Trabajé con tecnologías modernas como React, TypeScript, Vite y CSS para crear componentes reutilizables y optimizar la experiencia del usuario."
     },
     "experienceTwo": {
-      "title": "Full Stack",
-      "timeline": "",
-      "description": "Participe en el desarrollo de una aplicación Web de Agentes de IA, realizando tareas tanto backend como en el front end con las tecnologías: Next, Express, Chakraui, Tailwind, TS, KNEX ORM, MYSQL  "
+      "title": "Desarrollador Full Stack",
+      "timeline": "Julio - Septiembre 2024",
+      "description": "Contribuí al desarrollo de una plataforma web de agentes de inteligencia artificial, abarcando tanto el desarrollo backend como frontend. Implementé funcionalidades end-to-end utilizando Next.js, Express.js, Chakra UI, Tailwind CSS, TypeScript, KNEX ORM y MySQL, enfocándome en la arquitectura escalable y la integración de servicios de IA."
     },
-    "experienceTree": {
-      "title": "Full Stack",
-      "timeline": "",
-      "description": " con las tecnologías: Next.js, ShadCN/Ui, TypeScript, TanStack, Nest.js, MongoDB, Prisma, Strapi."
+    "experienceThree": {
+      "title": "Desarrollador Full Stack Freelance",
+      "timeline": "Octubre 2024 - Mayo 2025",
+      "description": "Actualmente desarrollo soluciones web complejas utilizando un stack tecnológico avanzado que incluye Next.js para el frontend, ShadCN/UI para componentes, TypeScript para tipado estático, TanStack para manejo de estado, Nest.js para el backend, MongoDB como base de datos, Prisma como ORM y Strapi como CMS headless."
     }
   },
   "projects": {

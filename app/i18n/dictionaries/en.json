@@ -16,19 +16,19 @@
   "experiences": {
     "title": "Experiences",
     "experienceOne": {
-      "title": "",
-      "timeline": "",
-      "description": ""
+      "title": "Frontend React Developer",
+      "timeline": "February - May 2024",
+      "description": "Participated in the development of a sports betting web application, implementing responsive user interfaces based on pre-established designs and developing REST API integrations. Worked with modern technologies including React, TypeScript, Vite, and CSS to create reusable components and optimize user experience."
     },
     "experienceTwo": {
-      "title": "",
-      "timeline": "",
-      "description": ""
+      "title": "Full Stack Developer",
+      "timeline": "July - September 2024",
+      "description": "Contributed to the development of an AI agents web platform, covering both backend and frontend development. Implemented end-to-end functionalities using Next.js, Express.js, Chakra UI, Tailwind CSS, TypeScript, KNEX ORM, and MySQL, focusing on scalable architecture and AI services integration."
     },
-    "experienceTree": {
-      "title": "",
-      "timeline": "",
-      "description": ""
+    "experienceThree": {
+      "title": "Freelance Full Stack Developer",
+      "timeline": "October 2024 - May 2025",
+      "description": "Participated in multiple freelance projects developing and maintaining full stack web functionalities. Implemented new features and improvements in both frontend and backend, using the following technologies: Next.js, ShadCN/UI, TypeScript, TanStack, Nest.js, MongoDB, Prisma, and Strapi."
     }
   },
   "projects": {

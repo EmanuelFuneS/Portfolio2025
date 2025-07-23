@@ -1,7 +1,5 @@
 'use client'
 
-import React from 'react'
-
 import { useI18n } from '@/app/i18n/context'
 import CardExperience from '@/components/card-experience'
 import Typography from '@/components/ui/typography'
@@ -17,19 +15,19 @@ const Page = () => {
         {dict.experiences.title}
       </Typography>
       <CardExperience
-        rol='Full Stack'
-        timeLine='jun-dec 2025'
-        description='"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."'
+        rol={dict.experiences.experienceOne.title}
+        timeLine={dict.experiences.experienceOne.timeline}
+        description={dict.experiences.experienceOne.description}
       />
       <CardExperience
-        rol='Full Stack'
-        timeLine='jun-dec 2025'
-        description='"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."'
+        rol={dict.experiences.experienceTwo.title}
+        timeLine={dict.experiences.experienceTwo.timeline}
+        description={dict.experiences.experienceTwo.description}
       />
       <CardExperience
-        rol='Full Stack'
-        timeLine='jun-dec 2025'
-        description='"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."'
+        rol={dict.experiences.experienceThree.title}
+        timeLine={dict.experiences.experienceThree.timeline}
+        description={dict.experiences.experienceThree.description}
       />
     </section>
   )
