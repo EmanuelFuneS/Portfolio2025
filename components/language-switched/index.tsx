@@ -1,34 +1,45 @@
 'use client'
 
-import React from 'react'
-
 import { usePathname, useRouter } from 'next/navigation'
 
 import { Select, SelectItem } from '@heroui/select'
 import { ES, US } from 'country-flag-icons/react/3x2'
 
-import { useI18n } from '@/app/i18n/context'
-
+import { useLocaleSwitcher } from '../../hook/useLocaleSwitcher'
 import Typography from '../ui/typography'
 
 const LanguageSwitched = () => {
   const router = useRouter()
   const pathname = usePathname()
-  const { locale } = useI18n()
+
+  const { currentLocale, switchLocale, locales } = useLocaleSwitcher()
 
   const changeLanguage = (newLocale: string) => {
-    const segments = pathname.split('/')
+    /* const segments = pathname.split('/')
     segments[1] = newLocale
     const newPath = segments.join('/')
-    router.push(newPath)
+    router.push(newPath) */
+
+    // Alternar entre idiomas
+    const currentIndex = locales.indexOf(currentLocale as 'es' | 'en')
+    const nextIndex = (currentIndex + 1) % locales.length
+    const nextLocale = locales[nextIndex]
+
+    // Esto forzará una recarga del servidor
+    switchLocale(nextLocale)
+    console.log(currentLocale)
   }
 
   return (
     <div className='w-20'>
       <Select
-        defaultSelectedKeys={[locale]}
+        defaultSelectedKeys={[currentLocale]}
         startContent={
-          locale === 'en' ? <US className='w-10' /> : <ES className='w-10' />
+          currentLocale === 'en' ? (
+            <US className='w-10' />
+          ) : (
+            <ES className='w-10' />
+          )
         }
         color='default'
         name='language'
