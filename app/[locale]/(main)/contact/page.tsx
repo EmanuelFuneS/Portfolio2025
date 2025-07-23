@@ -44,7 +44,7 @@ const Page = () => {
             } else {
                 setSubmitStatus('error')
                 addToast({
-                    title: "Error to send message",
+                    title: `Error to send message. Error: ${JSON.stringify(response.body)}`,
                     color: "danger"
                 })
             }

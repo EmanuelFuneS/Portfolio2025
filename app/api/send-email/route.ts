@@ -30,7 +30,7 @@ export async function POST(request: NextRequest) {
                 message: 'Email sent successfully',
             })
         } else {
-            return NextResponse.json({ error: 'Failed to send email' }, { status: 500 })
+            return NextResponse.json({ error: `Failed to send email. Error: ${contactResult.error}` }, { status: 500 })
         }
 
     } catch (error) {
