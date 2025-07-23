@@ -1,6 +1,6 @@
 'use client'
 
-import React from 'react'
+import Link from 'next/link'
 
 import TechsSlice from '@/components/techs-slice'
 import CustomButton from '@/components/ui/button'
@@ -30,7 +30,9 @@ const Page = () => {
         <CustomButton onClick={downloadCvFromApi}>
           {dict.about.downloadCv}
         </CustomButton>
-        <CustomButton>{dict.about.contactMe}</CustomButton>
+        <CustomButton>
+          <Link href={'/contact'}>{dict.about.contactMe}</Link>
+        </CustomButton>
       </div>
       <Typography as='h3' variant='subline'>
         {dict.about.experienceWith}

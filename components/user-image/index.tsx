@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 
 import { useTheme } from 'next-themes'
 import Image from 'next/image'
@@ -23,6 +23,8 @@ const UserImage = () => {
       <Image
         src={theme === 'light' ? userImageCustom : userImage}
         alt='Emanuel Funes'
+        width={280}
+        height={280}
         className={imageClasses}
         priority
       />
