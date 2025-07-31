@@ -10,7 +10,7 @@ export const downloadCvFromApi = async () => {
 
     const link = document.createElement('a')
     link.href = url
-    link.download = 'Cv Emanuel Funes.pdf'
+    link.download = 'Emanuel Funes CV 2025.pdf'
 
     document.body.appendChild(link)
     link.click()

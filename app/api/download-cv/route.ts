@@ -9,7 +9,7 @@ export async function GET() {
       process.cwd(),
       'public',
       'cv',
-      'Cv Emanuel Funes.pdf'
+      'Emanuel Funes CV 2025.pdf'
     )
 
     if (!fs.existsSync(filePath)) {
