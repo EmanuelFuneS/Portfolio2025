@@ -36,7 +36,7 @@ const NavBar = () => {
             </Link>
             <Link href={'/projects'}>
               <Typography as='span' variant='nav-link'>
-                Projects
+                {dict.navigation.projects}
               </Typography>
             </Link>
             <Link href={'/experience'}>
@@ -87,7 +87,7 @@ const NavBar = () => {
               <DropdownItem key='projects'>
                 <Link href={'/projects'}>
                   <Typography as='span' variant='nav-link'>
-                    Projects
+                    {dict.navigation.projects}
                   </Typography>
                 </Link>
               </DropdownItem>
