@@ -24,10 +24,11 @@ const CardProject = ({ url, name, description }: CardProjectProps) => {
       placement='top'
       showArrow
       classNames={{
-        base: ['before:bg-[#ededed] dark:bg-[#2A2A2A] rounded-full'],
+        base: [''],
         content: [
+          'bg-[#E5E7EB] dark:bg-[#222222]',
           'py-2 px-4 shadow-xl',
-          'bg-linear-to-br from-[#ededed] to-neutral-400',
+          'text-[#161513] dark:text-[#ededed]',
         ],
       }}
     >
