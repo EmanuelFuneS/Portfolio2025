@@ -25,6 +25,7 @@
     "@heroui/system": "2.4.19",
     "@heroui/theme": "2.4.19",
     "@heroui/toast": "^2.0.13",
+    "@heroui/tooltip": "^2.2.21",
     "@types/nodemailer": "^6.4.17",
     "country-flag-icons": "^1.5.19",
     "framer-motion": "12.23.6",
