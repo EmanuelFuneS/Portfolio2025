@@ -23,6 +23,7 @@ const Page = () => {
           url={project.url}
           name={project.name}
           description={project.description}
+          keyTooltip={index}
         />
       ))}
     </div>

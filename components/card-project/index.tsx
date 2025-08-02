@@ -9,9 +9,15 @@ interface CardProjectProps {
   url: string
   name: string
   description?: string
+  keyTooltip?: number
 }
 
-const CardProject = ({ url, name, description }: CardProjectProps) => {
+const CardProject = ({
+  url,
+  name,
+  description,
+  keyTooltip,
+}: CardProjectProps) => {
   const imageUrl = `https://image.thum.io/get/width/1200/crop/800/${url}`
   return (
     <Card isFooterBlurred className='m-4 border-none' radius='lg' shadow='md'>
@@ -23,6 +29,7 @@ const CardProject = ({ url, name, description }: CardProjectProps) => {
 
       <CardFooter className='justify-between dark:bg-[#2A2A2A] before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10'>
         <Tooltip
+          key={keyTooltip}
           content={
             <div className='px-1 py-2 max-w-[1400px] text-ellipsis'>
               <div className='font-bold text-small'>{name}</div>
