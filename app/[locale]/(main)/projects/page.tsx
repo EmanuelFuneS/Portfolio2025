@@ -1,3 +1,5 @@
+'use client'
+
 import CardProject from '@/components/card-project'
 
 const screenshotsUrls = [
