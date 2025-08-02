@@ -1,3 +1,5 @@
+'use client'
+
 import Link from 'next/link'
 
 import { Button } from '@heroui/button'
@@ -31,7 +33,7 @@ const CardProject = ({
         <Tooltip
           key={keyTooltip}
           content={
-            <div className='px-1 py-2 max-w-[1400px] text-ellipsis'>
+            <div className='px-1 py-2 max-w-[160px] text-ellipsis'>
               <div className='font-bold text-small'>{name}</div>
               <div className='text-tiny '>{description}</div>
             </div>
