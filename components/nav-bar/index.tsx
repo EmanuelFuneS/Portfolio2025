@@ -34,9 +34,11 @@ const NavBar = () => {
                 {dict.navigation.about}
               </Typography>
             </Link>
-            {/* <Link href={'/projects'}>
-                            <Typography as='span' variant='nav-link'>Projects</Typography>
-                        </Link> */}
+            <Link href={'/projects'}>
+              <Typography as='span' variant='nav-link'>
+                Projects
+              </Typography>
+            </Link>
             <Link href={'/experience'}>
               <Typography as='span' variant='nav-link'>
                 {dict.navigation.experiences}
@@ -82,9 +84,13 @@ const NavBar = () => {
                   </Typography>
                 </Link>
               </DropdownItem>
-              {/* <DropdownItem key="projects"><Link href={'/projects'}>
-                                <Typography as='span' variant='nav-link'>Projects</Typography>
-                            </Link></DropdownItem> */}
+              <DropdownItem key='projects'>
+                <Link href={'/projects'}>
+                  <Typography as='span' variant='nav-link'>
+                    Projects
+                  </Typography>
+                </Link>
+              </DropdownItem>
               <DropdownItem key='experiences'>
                 <Link href={'/experience'}>
                   <Typography as='span' variant='nav-link'>
