@@ -35,12 +35,12 @@ const screenshotsUrls = [
     url: 'https://github.com/EmanuelFuneS/react-native-apps/tree/main/apps/native',
     description: 'Weather app, developed in Expo, ReactNative, weatherApi',
   },
-  {
+  /* {
     image: github,
     name: 'TodoApp',
     url: 'https://github.com/EmanuelFuneS/flutterApp',
     description: 'Todo app, developed in flutter',
-  },
+  }, */
   {
     image: lasVpn,
     name: 'LaslesVpn',
