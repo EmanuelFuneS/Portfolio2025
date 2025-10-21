@@ -25,9 +25,9 @@ const NavBar = () => {
     <>
       <nav className='hidden md:block w-full h-20 bg-[#E5E7EB] dark:bg-[#222222]'>
         <div className='flex items-center justify-around h-full px-4 mx-auto max-w-7xl'>
-          <div>
+          {/*  <div>
             <Image src={Signature} alt='Emanuel Funes' />
-          </div>
+          </div> */}
           <div className='flex justify-between w-1/2 lg:w-1/3 md:gap-4'>
             <Link href={'/'}>
               <Typography as='span' variant='nav-link'>
