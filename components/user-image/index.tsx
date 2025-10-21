@@ -1,12 +1,11 @@
 import { useEffect, useState } from 'react'
 
-import { useTheme } from 'next-themes'
 import Image from 'next/image'
 
 import userImage from '../../public/user.png'
 
 const UserImage = () => {
-  const { theme } = useTheme()
+  //const { theme } = useTheme()
   const [isClient, setIsClient] = useState(false)
 
   useEffect(() => {
