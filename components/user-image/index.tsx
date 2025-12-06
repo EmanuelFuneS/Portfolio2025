@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 
 import Image from 'next/image'
 
-import userImage from '../../public/user.png'
+/* import userImage from '../../public/user.png' */
 
 const UserImage = () => {
   //const { theme } = useTheme()
@@ -19,7 +19,7 @@ const UserImage = () => {
   return (
     <div className=''>
       <Image
-        src={/* theme === 'light' ? userImageCustom : */ userImage}
+        src={/* theme === 'light' ? userImageCustom :  userImage*/ ''}
         alt='Emanuel Funes'
         width={280}
         height={280}

@@ -5,7 +5,6 @@ import Link from 'next/link'
 import TechsSlice from '@/components/techs-slice'
 import CustomButton from '@/components/ui/button'
 import Typography from '@/components/ui/typography'
-import UserImage from '@/components/user-image'
 import { downloadCvFromApi } from '@/lib/cv-download'
 
 import { useI18n } from '../../i18n/context'
@@ -18,7 +17,7 @@ const Page = () => {
       className='flex flex-col items-center justify-center gap-10 md:px-10 md:m-10 h-11/12 '
       style={{ minHeight: 'calc(100vh - 250px)' }}
     >
-      <UserImage />
+      {/* <UserImage /> */}
       <Typography as='h1' variant='headline'>
         {dict.about.title}
       </Typography>
