@@ -44,7 +44,7 @@ const screenshotsUrls = [
   {
     image: lasVpn,
     name: 'LaslesVpn',
-    url: 'https://github.com/EmanuelFuneS/flutterApp',
+    url: 'https://lasles-vpn-xi.vercel.app/',
   },
   {
     image: agile,
