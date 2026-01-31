@@ -25,7 +25,7 @@ const screenshotsUrls = [
   {
     image: github,
     name: 'E-Commerce ByteBazar',
-    url: 'https://github.com/EmanuelFuneS/e-commerce',
+    url: 'https://e-commerce-byte-bazar.vercel.app/',
     description:
       'E-Commerce in progress. Techs used are Turbo Repo, NextJS, TS, Tailwind, Prisma, Postgres, Auth0, Cloudinary ',
   },
