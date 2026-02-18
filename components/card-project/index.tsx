@@ -23,7 +23,7 @@ const CardProject = ({ url, name, description, image }: CardProjectProps) => {
     <Card isFooterBlurred className='m-4 border-none' radius='lg' shadow='md'>
       <Image
         alt='Project screenshot'
-        className='object-cover md:w-[280px] md:h-[230px]'
+        className='object-contain md:w-full md:h-auto'
         src={image.src}
       />
 

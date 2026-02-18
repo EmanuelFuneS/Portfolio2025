@@ -7,7 +7,7 @@ import github from '@/public/github.jpg'
 import lasVpn from '@/public/laslesvpn.png'
 import luxury from '@/public/luxury.png'
 
-const screenshotsUrls = [
+export const screenshotsUrls = [
   {
     image: luxury,
     name: 'Simple Design Hotel',

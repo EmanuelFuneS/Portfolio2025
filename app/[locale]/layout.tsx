@@ -49,7 +49,7 @@ export default async function RootLayout({
             <I18nProvider dict={dict} locale={locale}>
               <ToastProvider />
               <NavBar />
-              <main className=' max-w-7xl mx-auto px-4 py-8 dark:bg-[#161513] text-foreground bg-background'>
+              <main className='max-w-8xl mx-auto px-2 py-4 dark:bg-[#161513] text-foreground bg-background'>
                 {children}
               </main>
             </I18nProvider>

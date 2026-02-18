@@ -1,23 +1,9 @@
 'use client'
 
-import Image from 'next/image'
-import Link from 'next/link'
-
-import { Button } from '@heroui/button'
-import {
-  Dropdown,
-  DropdownItem,
-  DropdownMenu,
-  DropdownTrigger,
-} from '@heroui/dropdown'
-import { CiMenuBurger } from 'react-icons/ci'
-
 import { useI18n } from '@/app/i18n/context'
 
-import Signature from '../../public/signatureLogo.svg'
 import LanguageSwitched from '../language-switched'
 import ThemeSwitcher from '../theme-switcher'
-import Typography from '../ui/typography'
 
 const NavBar = () => {
   const { dict } = useI18n()
@@ -25,9 +11,9 @@ const NavBar = () => {
     <>
       <nav className='hidden md:block w-full h-20 bg-[#E5E7EB] dark:bg-[#222222]'>
         <div className='flex items-center justify-around h-full px-4 mx-auto max-w-7xl'>
-          {/*  <div>
+          {/* <div>
             <Image src={Signature} alt='Emanuel Funes' />
-          </div> */}
+          </div>
           <div className='flex justify-between w-1/2 lg:w-1/3 md:gap-4'>
             <Link href={'/'}>
               <Typography as='span' variant='nav-link'>
@@ -44,16 +30,16 @@ const NavBar = () => {
                 {dict.navigation.experiences}
               </Typography>
             </Link>
-            {/* <Link href={'techs'}>
+            <Link href={'techs'}>
                             <Typography as='span' variant='nav-link'>Techs</Typography>
-                        </Link> */}
+                        </Link>
             <Link href={'/contact'}>
               <Typography as='span' variant='nav-link'>
                 {dict.navigation.contact}
               </Typography>
             </Link>
-          </div>
-          <div className='flex items-center justify-center gap-4 '>
+          </div> */}
+          <div className='flex items-center justify-end w-full gap-4 '>
             <ThemeSwitcher />
             <LanguageSwitched />
           </div>
@@ -61,16 +47,17 @@ const NavBar = () => {
       </nav>
 
       <nav className='block md:hidden  w-full h-[85] bg-[#E5E7EB] dark:bg-[#222222]'>
-        <div className='flex items-center justify-between p-4'>
-          <div>
-            <Image
+        <div className='flex items-center justify-end p-4 space-x-4'>
+          {/* <Image
               src={Signature}
               width={150}
               height={100}
               alt='Emanuel Funes'
-            />
-          </div>
-          <Dropdown>
+            /> */}
+          <ThemeSwitcher />
+          <LanguageSwitched />
+
+          {/* <Dropdown>
             <DropdownTrigger>
               <Button variant='flat' aria-label='Menu'>
                 <CiMenuBurger size={20} />
@@ -98,11 +85,11 @@ const NavBar = () => {
                   </Typography>
                 </Link>
               </DropdownItem>
-              {/* <DropdownItem key="techs">
+              <DropdownItem key="techs">
                                 <Link href={'techs'}>
                                     <Typography as='span' variant='nav-link'>Techs</Typography>
                                 </Link>
-                            </DropdownItem> */}
+                            </DropdownItem>
               <DropdownItem key='contact'>
                 <Link href={'/contact'}>
                   <Typography as='span' variant='nav-link'>
@@ -120,7 +107,7 @@ const NavBar = () => {
                 </div>
               </DropdownItem>
             </DropdownMenu>
-          </Dropdown>
+          </Dropdown> */}
         </div>
       </nav>
     </>
