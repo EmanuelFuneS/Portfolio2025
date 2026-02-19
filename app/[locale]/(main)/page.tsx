@@ -16,6 +16,7 @@ import { useI18n } from '../../i18n/context'
 
 const Page = () => {
   const { dict } = useI18n()
+
   const { activity, isLoading } = useGithubActivity()
 
   return (
