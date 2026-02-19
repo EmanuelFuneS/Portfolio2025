@@ -35,6 +35,9 @@ type Dictionary = {
       description: string
     }
   }
+  projects: {
+    title: string
+  }
   contact: {
     title: string
     subtitle: string

@@ -1,12 +1,10 @@
 'use client'
 
-import { useI18n } from '@/app/i18n/context'
-
 import LanguageSwitched from '../language-switched'
 import ThemeSwitcher from '../theme-switcher'
 
 const NavBar = () => {
-  const { dict } = useI18n()
+  /* const { dict } = useI18n() */
   return (
     <>
       <nav className='hidden md:block w-full h-20 bg-[#E5E7EB] dark:bg-[#222222]'>

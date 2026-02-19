@@ -12,18 +12,33 @@ import { Image } from '@heroui/image'
 interface CardProjectProps {
   url: string
   name: string
+  github: string
   description?: string
   image: StaticImageData
 }
 
-const CardProject = ({ url, name, description, image }: CardProjectProps) => {
+const CardProject = ({
+  url,
+  name,
+  description,
+  image,
+  github,
+}: CardProjectProps) => {
   const [isHovered, setIsHovered] = useState(false)
 
   return (
-    <Card isFooterBlurred className='m-4 border-none' radius='lg' shadow='md'>
+    <Card
+      isFooterBlurred
+      className='w-full h-full m-4 overflow-hidden border-none'
+      radius='lg'
+      shadow='md'
+    >
       <Image
         alt='Project screenshot'
-        className='object-contain md:w-full md:h-auto'
+        classNames={{
+          wrapper: 'w-full h-full',
+          img: 'object-cover w-full h-full',
+        }}
         src={image.src}
       />
 
@@ -36,20 +51,36 @@ const CardProject = ({ url, name, description, image }: CardProjectProps) => {
             : 'h-14' // Altura contraída (solo botón)
         }`}
       >
-        <Button
-          className='w-full text-tiny bg-[#2A2A2A]/40 backdrop-blur-sm'
-          color='default'
-          radius='lg'
-          size='sm'
-          variant='flat'
-        >
-          <Link
-            href={url}
-            className='text-[#ededed] font-semibold drop-shadow-lg [text-shadow:_0_1px_2px_rgb(0_0_0_/_40%)]'
+        <div className='flex space-x-6 '>
+          <Button
+            className='w-full text-tiny bg-[#2A2A2A]/40 backdrop-blur-sm hover:scale-105'
+            color='default'
+            radius='lg'
+            size='sm'
+            variant='faded'
           >
-            CLICK TO VISIT
-          </Link>
-        </Button>
+            <Link
+              href={url}
+              className='text-[#ededed] font-semibold drop-shadow-lg [text-shadow:_0_1px_2px_rgb(0_0_0_/_40%)]'
+            >
+              Deploy
+            </Link>
+          </Button>
+          <Button
+            className='w-full text-tiny bg-[#2A2A2A]/40 backdrop-blur-sm hover:scale-105'
+            color='default'
+            radius='lg'
+            size='sm'
+            variant='faded'
+          >
+            <Link
+              href={github}
+              className='text-[#ededed] font-semibold drop-shadow-lg [text-shadow:_0_1px_2px_rgb(0_0_0_/_40%)]'
+            >
+              Repository
+            </Link>
+          </Button>
+        </div>
         {isHovered && description && (
           <div className='px-1 py-2 text-ellipsis'>
             <div className='font-bold text-small'>{name}</div>
