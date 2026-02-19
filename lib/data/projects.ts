@@ -7,22 +7,6 @@ import luxury from '@/public/luxury.png'
 
 export const screenshotsUrls = [
   {
-    image: luxury,
-    name: 'Simple Design Hotel',
-    url: 'https://simple-design-hotel-web.vercel.app/',
-    github: '',
-    description:
-      'A simple hotel booking website with a modern design. Techs used are Next.js, React, Tailwind CSS and TypeScript.',
-  },
-  {
-    image: swagger,
-    name: 'Todo API Documentation',
-    url: 'https://todo-api-production-877c.up.railway.app/docs',
-    github: '',
-    description:
-      'API documentation for a simple todo application. Techs used are Python, FastAPI, PyTest, MongoDB.',
-  },
-  {
     image: byteBazar,
     name: 'E-Commerce ByteBazar',
     url: 'https://e-commerce-byte-bazar.vercel.app/',
@@ -57,13 +41,29 @@ export const screenshotsUrls = [
     url: 'https://github.com/EmanuelFuneS/todo-Api',
     github: "",
     description: 'Todo app, developed in flutter',
-  }, */
+    }, */
   {
     image: lasVpn,
     name: 'LaslesVpn',
     url: 'https://lasles-vpn-xi.vercel.app/',
     github: '',
     description: '',
+  },
+  {
+    image: luxury,
+    name: 'Simple Design Hotel',
+    url: 'https://simple-design-hotel-web.vercel.app/',
+    github: '',
+    description:
+      'A simple hotel booking website with a modern design. Techs used are Next.js, React, Tailwind CSS and TypeScript.',
+  },
+  {
+    image: swagger,
+    name: 'Todo API Documentation',
+    url: 'https://todo-api-production-877c.up.railway.app/docs',
+    github: '',
+    description:
+      'API documentation for a simple todo application. Techs used are Python, FastAPI, PyTest, MongoDB.',
   },
   {
     image: agile,
