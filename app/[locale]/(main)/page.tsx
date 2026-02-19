@@ -2,12 +2,14 @@
 
 import Link from 'next/link'
 
+import { Button } from '@heroui/button'
 import { Card, CardBody, CardHeader } from '@heroui/card'
 
 import TechsSlice from '@/components/techs-slice'
 import Typography from '@/components/ui/typography'
 
 import CardProject from '../../../components/card-project'
+import { downloadCvFromApi } from '../../../lib/cv-download'
 import { screenshotsUrls } from '../../../lib/data/projects'
 import useGithubActivity, {
   Activity,
@@ -28,7 +30,8 @@ const Page = () => {
         className='
   flex flex-col gap-2.5
   md:grid md:grid-cols-3 md:grid-rows-5 
-  lg:grid lg:grid-cols-5 lg:grid-rows-3 
+  lg:grid lg:grid-cols-4 lg:grid-rows-3 
+  xl:grid xl:grid-cols-5 xl:grid-rows-3 
   bg-[var(--app-bg)] rounded-2xl min-h-[700px]
 '
       >
@@ -44,12 +47,12 @@ const Page = () => {
   '
         >
           <CardHeader>
-            <Typography as='h1' variant='headline'>
+            <Typography as='h1' variant='headline' className='py-4 text-start'>
               {dict.about.title}
             </Typography>
           </CardHeader>
-          <CardBody>
-            <Typography as='p' variant='subline'>
+          <CardBody className='flex items-center justify-center'>
+            <Typography as='p' variant='subline' className='text-start'>
               {dict.about.aboutMe}
             </Typography>
           </CardBody>
@@ -80,7 +83,8 @@ const Page = () => {
         <Card
           className='
     w-full 
-    lg:col-start-3 lg:col-span-1 lg:row-start-2 lg:row-span-2
+    xl:col-start-3 xl:col-span-1 xl:row-start-2 xl:row-span-2
+    lg:col-start-1 lg:col-span-2 lg:row-start-3 lg:row-span-1
     md:col-start-1 md:col-span-1 md:row-start-4 md:row-span-2
     bg-[var(--item-c3)] text-[var(--text-title)] 
     flex flex-row md:flex-col items-center justify-center font-bold 
@@ -102,49 +106,63 @@ const Page = () => {
         <Card
           className='
     w-full
-    lg:col-start-4 lg:col-span-2 lg:row-start-2 lg:row-span-2
+    xl:col-start-4 xl:col-span-2 xl:row-start-2 xl:row-span-2
+    lg:col-start-3 lg:col-span-2 lg:row-start-2 lg:row-span-2
     md:col-start-2 md:col-span-2 md:row-start-4 md:row-span-2
     grid grid-cols-2 grid-rows-2 
     bg-[var(--item-c4)] text-[var(--text-title)] 
     rounded-lg  gap-4 p-6 font-bold
   '
         >
-          <Card className='w-full h-full hover:scale-105'>
-            <CardBody className='flex items-center justify-center'>
-              {dict.about.downloadCv}
-            </CardBody>
-          </Card>
+          <Button
+            className='w-full h-full p-0 m-0 bg-transparent border-none shadow-xl hover:scale-105'
+            variant='light'
+            onClick={downloadCvFromApi}
+          >
+            <Card className='w-full h-full'>
+              <CardBody className='flex items-center justify-center'>
+                <Typography as='p' variant='paragraph' className='font-bold'>
+                  {dict.about.downloadCv}
+                </Typography>
+              </CardBody>
+            </Card>
+          </Button>
 
-          <Card className='w-full h-full hover:scale-105'>
-            <CardBody className='flex items-center justify-center'>
-              <Link
-                href={
-                  'https://mail.google.com/mail/?view=cm&to=ignacio.emanuel.funes@gmail.com&su=Asunto&body=Hola'
-                }
-              >
+          <Link
+            href={
+              'https://mail.google.com/mail/?view=cm&to=ignacio.emanuel.funes@gmail.com&su=Asunto&body=Hola'
+            }
+          >
+            <Card className='w-full h-full hover:scale-105'>
+              <CardBody className='flex items-center justify-center'>
                 {dict.about.contactMe}
-              </Link>
-            </CardBody>
-          </Card>
+              </CardBody>
+            </Card>
+          </Link>
 
-          <Card className='w-full h-full hover:scale-105'>
-            <CardBody className='flex items-center justify-center'>
-              <Link href={''}>Linkedin</Link>
-            </CardBody>
-          </Card>
+          <Link href={'https://www.linkedin.com/in/emanuelfun/'}>
+            <Card className='w-full h-full hover:scale-105'>
+              <CardBody className='flex items-center justify-center'>
+                Linkedin
+              </CardBody>
+            </Card>
+          </Link>
 
-          <Card className='w-full h-full hover:scale-105'>
-            <CardBody className='flex items-center justify-center'>
-              <Link href={''}>GitHub</Link>
-            </CardBody>
-          </Card>
+          <Link href={'https://github.com/EmanuelFuneS/'}>
+            <Card className='w-full h-full hover:scale-105'>
+              <CardBody className='flex items-center justify-center'>
+                GitHub
+              </CardBody>
+            </Card>
+          </Link>
         </Card>
 
-        {/* Item 5 - Last Project */}
+        {/* Item 5 - Last Activity */}
         <Card
           className='
     w-full
-    lg:col-start-1 lg:col-span-2 lg:row-start-3 lg:row-span-1
+    xl:col-start-1 xl:col-span-2 xl:row-start-3 xl:row-span-1
+    lg:col-start-1 lg:col-span-4 lg:row-start-4 lg:row-span-1
     md:col-start-1 md:col-span-3 md:row-start-6 md:row-span-1
     bg-[var(--item-c5)] text-[var(--text-title)] 
     flex items-center justify-center font-bold 
@@ -162,7 +180,7 @@ const Page = () => {
               activity.map((e: Activity, idx: number) => (
                 <div
                   key={idx}
-                  className='flex justify-between hover:text-slate-500'
+                  className='flex justify-between h-full hover:text-slate-500'
                 >
                   <Typography as={'legend'} variant='paragraph'>
                     {e.repo}
