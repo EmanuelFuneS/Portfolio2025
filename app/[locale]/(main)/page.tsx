@@ -188,7 +188,7 @@ const Page = () => {
                   <Typography as={'legend'} variant='paragraph'>
                     {e.date}
                   </Typography>
-                  <Link href={e.url}>Link</Link>
+                  {/* <Link href={e.url}>Link</Link> */}
                 </div>
               ))}
           </CardBody>
