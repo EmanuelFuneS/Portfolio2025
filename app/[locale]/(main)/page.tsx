@@ -254,20 +254,22 @@ const Page = () => {
           </Card>
         </div>
       </section>
-      <section className='space-y-6 '>
+      <section className='max-w-6xl mx-auto space-y-20 '>
         <Typography as='h1' variant='headline'>
           {dict.projects.title}
         </Typography>
-        {screenshotsUrls.map((project, index: number) => (
-          <CardProject
-            key={index}
-            image={project.image}
-            url={project.url}
-            github={project.github}
-            name={project.name}
-            description={project.description}
-          />
-        ))}
+        <div className='space-y-10'>
+          {screenshotsUrls.map((project, index: number) => (
+            <CardProject
+              key={index}
+              image={project.image}
+              url={project.url}
+              github={project.github}
+              name={project.name}
+              description={project.description}
+            />
+          ))}
+        </div>
       </section>
     </div>
   )
