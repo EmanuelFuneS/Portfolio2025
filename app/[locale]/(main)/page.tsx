@@ -206,8 +206,8 @@ const Page = () => {
           <span className='relative w-3 h-3 rounded-full right-1.5 bg-slate-400'></span>
           <span className='relative w-3 h-3 rounded-full right-1.5 bg-slate-400'></span>
         </div>
-        <div className='flex flex-col justify-around h-screen'>
-          <Card className='p-4'>
+        <div className='flex flex-col justify-around h-screen space-y-10'>
+          <Card className='md:p-4'>
             <CardHeader className='flex justify-between w-full'>
               <Typography as='h1' variant='headline'>
                 {dict.experiences.experienceOne.title}
@@ -254,7 +254,7 @@ const Page = () => {
           </Card>
         </div>
       </section>
-      <section className='max-w-6xl mx-auto space-y-20 '>
+      <section className='w-full mx-auto space-y-20 '>
         <Typography as='h1' variant='headline'>
           {dict.projects.title}
         </Typography>

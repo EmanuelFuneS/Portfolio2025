@@ -11,6 +11,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens: {
+        xs: '435px',
+      },
       fontFamily: {
         exo2: ['var(--font-exo2)'],
         mono: ['var(--font-geist-mono)'],

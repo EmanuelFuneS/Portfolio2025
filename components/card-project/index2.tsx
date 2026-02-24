@@ -6,6 +6,7 @@ import { StaticImageData } from 'next/image'
 import Link from 'next/link'
 
 import { Button } from '@heroui/button'
+import { Card, CardFooter } from '@heroui/card'
 import { Image } from '@heroui/image'
 
 interface CardProjectProps {
@@ -26,20 +27,31 @@ const CardProject = ({
   const [isHovered, setIsHovered] = useState(false)
 
   return (
-    <div className='flex flex-col justify-between w-full h-full border lg:flex-row rounded-xl shadow-medium border-white/0'>
-      <div className='w-full lg:w-[650px] xl:w-[800px]'>
-        <Image
-          alt='Project screenshot'
-          className='w-full rounded-xl md:rounded-r-none'
-          src={image.src}
-        />
-      </div>
-      <div className='flex flex-col items-start w-full h-full px-2 py-4 space-y-2 text-start text-ellipsis'>
-        <div className='font-bold text-small'>{name}</div>
-        <div className='text-tiny'>{description}</div>
-      </div>
-      <div className='flex flex-col items-center h-full p-4 space-y-6'>
-        {url && (
+    <Card
+      isFooterBlurred
+      className='w-full h-full m-4 overflow-hidden border-none'
+      radius='lg'
+      shadow='md'
+    >
+      <Image
+        alt='Project screenshot'
+        classNames={{
+          wrapper: 'w-full h-full',
+          img: 'object-cover w-full h-full',
+        }}
+        src={image.src}
+      />
+
+      <CardFooter
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+        className={`flex flex-col justify-start dark:bg-[#2A2A2A] before:bg-white/10 border-white/20 border-1 overflow-hidden py-2 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10 transition-all duration-700 ease-out ${
+          isHovered && description?.length
+            ? 'h-32' // Altura expandida
+            : 'h-14' // Altura contraída (solo botón)
+        }`}
+      >
+        <div className='flex space-x-6 '>
           <Button
             className='w-full text-tiny bg-[#2A2A2A]/40 backdrop-blur-sm hover:scale-105'
             color='default'
@@ -54,8 +66,6 @@ const CardProject = ({
               Deploy
             </Link>
           </Button>
-        )}
-        {github && (
           <Button
             className='w-full text-tiny bg-[#2A2A2A]/40 backdrop-blur-sm hover:scale-105'
             color='default'
@@ -70,9 +80,15 @@ const CardProject = ({
               Repository
             </Link>
           </Button>
+        </div>
+        {isHovered && description && (
+          <div className='px-1 py-2 text-ellipsis'>
+            <div className='font-bold text-small'>{name}</div>
+            <div className='text-tiny'>{description}</div>
+          </div>
         )}
-      </div>
-    </div>
+      </CardFooter>
+    </Card>
   )
 }
 
