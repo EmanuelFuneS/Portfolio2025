@@ -1,7 +1,5 @@
 'use client'
 
-import { useState } from 'react'
-
 import { StaticImageData } from 'next/image'
 import Link from 'next/link'
 
@@ -23,8 +21,6 @@ const CardProject = ({
   image,
   github,
 }: CardProjectProps) => {
-  const [isHovered, setIsHovered] = useState(false)
-
   return (
     <div className='flex flex-col justify-between w-full h-full border lg:flex-row rounded-xl shadow-medium border-white/0'>
       <div className='w-full lg:w-[650px] xl:w-[800px]'>
