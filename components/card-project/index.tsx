@@ -11,7 +11,7 @@ import { Image } from '@heroui/image'
 interface CardProjectProps {
   url: string
   name: string
-  github: string
+  github: string | null
   description?: string
   image: StaticImageData
 }
