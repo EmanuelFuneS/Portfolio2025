@@ -7,7 +7,7 @@ import { Button } from '@heroui/button'
 import { Image } from '@heroui/image'
 
 interface CardProjectProps {
-  url: string
+  url: string | null
   name: string
   github: string | null
   description?: string
