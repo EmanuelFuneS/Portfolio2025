@@ -1,3 +1,4 @@
+import intercom from '@/public/Intercom.png'
 import swagger from '@/public/Swagger.png'
 import agile from '@/public/agileStrat.png'
 import authApp from '@/public/auth-app.png'
@@ -15,6 +16,14 @@ export const screenshotsUrls = [
       'https://github.com/EmanuelFuneS/e-commerce/tree/main/apps/byte-bazar',
     description:
       'Full-stack e-commerce platform currently in active development, built with a monorepo architecture using Turborepo for efficient multi-package management. Features include product listings, cart management, and secure authentication via JWT. The stack includes Next.js (App Router), TypeScript, and Tailwind CSS on the frontend, with Prisma as the ORM connected to a PostgreSQL database hosted on Supabase. Media assets are handled through Cloudinary, and the entire environment is containerized with Docker for consistent development and deployment. Deployed on Vercel.',
+  },
+  {
+    image: intercom,
+    name: 'Intercom',
+    url: 'https://webs-intercom.vercel.app/',
+    github: 'https://github.com/EmanuelFuneS/Webs/tree/main/apps/intercom',
+    description:
+      'Static site built with Next.js, React, TypeScript and Tailwind CSS, structured as a monorepo and powered by a headless Strapi CMS for content management.',
   },
   {
     image: authApp,
