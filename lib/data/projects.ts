@@ -23,7 +23,15 @@ export const screenshotsUrls = [
     url: 'https://webs-intercom.vercel.app/',
     github: 'https://github.com/EmanuelFuneS/Webs/tree/main/apps/intercom',
     description:
-      'Static site built with Next.js, React, TypeScript and Tailwind CSS, structured as a monorepo and powered by a headless Strapi CMS for content management.',
+      'Static site built with Next.js (SSG), React, TypeScript and Tailwind CSS, structured as a monorepo. Fetches and downloads content and images from a headless Strapi CMS at build time for fully static deployment.',
+  },
+  {
+    image: github,
+    name: 'Intercom-Strapi-Api',
+    url: null,
+    github: 'https://github.com/EmanuelFuneS/Webs/tree/main/apps/strapi-app',
+    description:
+      'Headless CMS powered by Strapi, exposing a REST API for content and media management. Includes a local content and image download pipeline to support static site generation on the frontend.',
   },
   {
     image: authApp,
