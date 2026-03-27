@@ -43,9 +43,9 @@ export const screenshotsUrls = [
       'Standalone micro-frontend focused entirely on the authentication flow, designed to integrate seamlessly into larger micro-frontend architectures. Built with React and Vite for fast bundling, it implements strict client-side form validation using Zod and React Hook Form, ensuring a smooth and reliable user experience. Styled with Tailwind CSS and containerized with Docker. Deployed as a static site on Render. Used in Byte-Bazar, connected with Auth-Service',
   },
   {
-    image: github,
+    image: swagger,
     name: 'Auth Service',
-    url: 'https://github.com/EmanuelFuneS/e-commerce/tree/main/apps/auth-service',
+    url: 'https://auth-service-dltg.onrender.com/docs',
     github:
       'https://github.com/EmanuelFuneS/e-commerce/tree/main/apps/auth-service',
     description:
