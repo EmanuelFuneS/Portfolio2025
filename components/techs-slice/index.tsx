@@ -1,6 +1,5 @@
 import { FaAws } from 'react-icons/fa'
 import {
-  SiAwesomewm,
   SiCss,
   SiDocker,
   SiFastapi,

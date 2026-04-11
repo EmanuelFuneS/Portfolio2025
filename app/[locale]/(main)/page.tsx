@@ -220,13 +220,15 @@ const Page = () => {
               </Typography>
               <div className='flex justify-center items-center p-5'>
                 <ol className='list-disc list-outside space-y-2 pl-5'>
-                  {dict.experiences.experienceOne.list.map(el => (
-                    <li className='list-item'>
-                      <Typography as='label' variant='paragraph'>
-                        {el}
-                      </Typography>
-                    </li>
-                  ))}
+                  {dict.experiences.experienceOne.list.map(
+                    (el, idx: number) => (
+                      <li key={idx} className='list-item'>
+                        <Typography as='label' variant='paragraph'>
+                          {el}
+                        </Typography>
+                      </li>
+                    )
+                  )}
                 </ol>
               </div>
             </CardBody>
