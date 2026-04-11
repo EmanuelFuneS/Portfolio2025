@@ -16,19 +16,16 @@
   "experiences": {
     "title": "Experiencias",
     "experienceOne": {
-      "title": "Desarrollador Frontend React",
-      "timeline": "Febrero - Mayo 2024",
-      "description": "Participé en el desarrollo de una aplicación web de apuestas deportivas, implementando interfaces de usuario responsivas basadas en diseños preestablecidos y desarrollando integraciones con APIs REST. Trabajé con tecnologías modernas como React, TypeScript, Vite y CSS para crear componentes reutilizables y optimizar la experiencia del usuario."
-    },
-    "experienceTwo": {
       "title": "Desarrollador Full Stack",
-      "timeline": "Julio - Septiembre 2024",
-      "description": "Contribuí al desarrollo de una plataforma web de agentes de inteligencia artificial, abarcando tanto el desarrollo backend como frontend. Implementé funcionalidades end-to-end utilizando Next.js, Express.js, Chakra UI, Tailwind CSS, TypeScript, KNEX ORM y MySQL, enfocándome en la arquitectura escalable y la integración de servicios de IA."
-    },
-    "experienceThree": {
-      "title": "Desarrollador Full Stack Freelance",
-      "timeline": "Octubre 2024 - Mayo 2025",
-      "description": "Participé en múltiples proyectos freelance desarrollando y manteniendo funcionalidades web full stack. Implementé nuevas características y mejoras en frontend y backend, utilizando las siguientes tecnologías: Next.js, ShadCN/UI, TypeScript, TanStack, Nest.js, MongoDB, Prisma y Strapi."
+      "timeline": "Febrero 2024 – Agosto 2025",
+      "description": "Durante este tiempo, trabajé en el desarrollo de soluciones integrales para diversas empresas (LaurenAI, Kromaticos, Stratum-It) y proyectos independientes, enfocándome en entregar productos escalables construidos sobre arquitecturas modernas.",
+      "list": [
+        "Desarrollo end-to-end: Diseño e implementación de funcionalidades web completas, desde la conceptualización hasta el despliegue, utilizando Next.js y TypeScript para crear interfaces modernas, responsivas y de alto rendimiento.",
+        "Arquitectura Backend: Desarrollo de APIs con Nest.js y Express, optimizando la persistencia de datos mediante el uso de ORMs como Prisma, Knex y Mongoose.",
+        "Optimización y Gestión de Estado: Implementación de mejoras críticas de rendimiento en el frontend con TanStack Query y gestión eficiente del estado global con Zustand y Redux.",
+        "Colaboración con clientes para definir requerimientos técnicos y garantizar la entrega de proyectos en tiempo y forma.",
+        "Tecnologías utilizadas: React, CSS, Tailwind, TypeScript, Vite, Next.js, Redux, ShadcnUI, ChakraUI, Express, Nest.js, PostgreSQL, MongoDB, Prisma, Knex, Socket.io, Git, CI/CD, Strapi."
+      ]
     }
   },
   "projects": {

@@ -23,16 +23,7 @@ type Dictionary = {
       title: string
       timeline: string
       description: string
-    }
-    experienceTwo: {
-      title: string
-      timeline: string
-      description: string
-    }
-    experienceThree: {
-      title: string
-      timeline: string
-      description: string
+      list: string[]
     }
   }
   projects: {

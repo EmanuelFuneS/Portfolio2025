@@ -140,7 +140,7 @@ const Page = () => {
             </Card>
           </Link>
 
-          <Link href={'https://www.linkedin.com/in/emanuelfun/'}>
+          <Link href={'https://www.linkedin.com/in/ignacio-funes-139b00401'}>
             <Card className='w-full h-full hover:scale-105'>
               <CardBody className='flex items-center justify-center'>
                 Linkedin
@@ -203,8 +203,6 @@ const Page = () => {
         </div>
         <div className='flex-col justify-around hidden h-screen md:visible md:flex border-l-1'>
           <span className='relative w-3 h-3 rounded-full right-1.5 bg-slate-400'></span>
-          <span className='relative w-3 h-3 rounded-full right-1.5 bg-slate-400'></span>
-          <span className='relative w-3 h-3 rounded-full right-1.5 bg-slate-400'></span>
         </div>
         <div className='flex flex-col justify-around h-screen space-y-10'>
           <Card className='md:p-4'>
@@ -220,36 +218,17 @@ const Page = () => {
               <Typography as='p' variant='paragraph'>
                 {dict.experiences.experienceOne.description}
               </Typography>
-            </CardBody>
-          </Card>
-          <Card className='p-4'>
-            <CardHeader className='flex justify-between w-full'>
-              <Typography as='h1' variant='headline'>
-                {dict.experiences.experienceTwo.title}
-              </Typography>
-              <Typography as='label' variant='subline'>
-                {dict.experiences.experienceTwo.timeline}
-              </Typography>
-            </CardHeader>
-            <CardBody>
-              <Typography as='p' variant='paragraph'>
-                {dict.experiences.experienceTwo.description}
-              </Typography>
-            </CardBody>
-          </Card>
-          <Card className='p-4'>
-            <CardHeader className='flex justify-between w-full'>
-              <Typography as='h1' variant='headline'>
-                {dict.experiences.experienceThree.title}
-              </Typography>
-              <Typography as='label' variant='subline'>
-                {dict.experiences.experienceThree.timeline}
-              </Typography>
-            </CardHeader>
-            <CardBody>
-              <Typography as='p' variant='paragraph'>
-                {dict.experiences.experienceThree.description}
-              </Typography>
+              <div className='flex justify-center items-center p-5'>
+                <ol className='list-disc list-outside space-y-2 pl-5'>
+                  {dict.experiences.experienceOne.list.map(el => (
+                    <li className='list-item'>
+                      <Typography as='label' variant='paragraph'>
+                        {el}
+                      </Typography>
+                    </li>
+                  ))}
+                </ol>
+              </div>
             </CardBody>
           </Card>
         </div>

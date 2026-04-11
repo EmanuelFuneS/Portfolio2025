@@ -6,6 +6,8 @@ import Link from 'next/link'
 import { Button } from '@heroui/button'
 import { Image } from '@heroui/image'
 
+import Typography from '../ui/typography'
+
 interface CardProjectProps {
   url: string | null
   name: string
@@ -31,8 +33,12 @@ const CardProject = ({
         />
       </div>
       <div className='flex flex-col items-start w-full h-full px-2 py-4 space-y-2 text-start text-ellipsis'>
-        <div className='font-bold text-small'>{name}</div>
-        <div className='text-tiny'>{description}</div>
+        <Typography as='h2' variant='nav-link'>
+          {name}
+        </Typography>
+        <Typography as='p' variant='paragraph' className='text-start'>
+          {description}
+        </Typography>
       </div>
       <div className='flex flex-col items-center h-full p-4 space-y-6'>
         {url && (
