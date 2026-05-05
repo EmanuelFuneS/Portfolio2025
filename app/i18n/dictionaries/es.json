@@ -18,7 +18,7 @@
     "experienceOne": {
       "title": "Desarrollador Full Stack",
       "timeline": "Febrero 2024 – Agosto 2025",
-      "description": "Durante este tiempo, trabajé en el desarrollo de soluciones integrales para diversas empresas (LaurenAI, Kromaticos, Stratum-It) y proyectos independientes, enfocándome en entregar productos escalables construidos sobre arquitecturas modernas.",
+      "description": "",
       "list": [
         "Desarrollo end-to-end: Diseño e implementación de funcionalidades web completas, desde la conceptualización hasta el despliegue, utilizando Next.js y TypeScript para crear interfaces modernas, responsivas y de alto rendimiento.",
         "Arquitectura Backend: Desarrollo de APIs con Nest.js y Express, optimizando la persistencia de datos mediante el uso de ORMs como Prisma, Knex y Mongoose.",
