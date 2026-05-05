@@ -1,5 +1,6 @@
 import intercom from '@/public/Intercom.png'
 import swagger from '@/public/Swagger.png'
+import Vercel from '@/public/vercel.png'
 import agile from '@/public/agileStrat.png'
 import authApp from '@/public/auth-app.png'
 import byteBazar from '@/public/byte-bazar.png'
@@ -8,6 +9,23 @@ import lasVpn from '@/public/laslesvpn.png'
 import luxury from '@/public/luxury.png'
 
 export const screenshotsUrls = [
+  {
+    image: Vercel,
+    name: 'Storage App',
+    url: '',
+    github: 'https://github.com/EmanuelFuneS/storage-cross-platform',
+    description:
+      'cloud storage application using AWS S3 and CloudFront for efficient data retrieval, deployed on Vercel with Next.js, React, TypeScript and Tailwind, allowing users to upload and manage files securely with low‑latency global access.',
+  },
+  {
+    image: Vercel,
+    name: 'CMS EdTech',
+    url: 'https://cms-14-dev.vercel.app/',
+    github:
+      'https://github.com/No-Country-simulation/S03-26-Equipo-14-Web-App-Development/tree/dev',
+    description:
+      'EdTech CMS to manage testimonials and success stories, featuring role‑based authentication, YouTube and Cloudinary integration for multimedia, text/image/video testimonial creation, category and tag classification, a moderation and review system, intelligent search, embeddable widgets and an NPM library, plus a public API for external websites.',
+  },
   {
     image: byteBazar,
     name: 'E-Commerce ByteBazar',
