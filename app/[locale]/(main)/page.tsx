@@ -1,9 +1,18 @@
 'use client'
 
+import Image from 'next/image'
 import Link from 'next/link'
 
 import { Button } from '@heroui/button'
 import { Card, CardBody, CardHeader } from '@heroui/card'
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableColumn,
+  TableHeader,
+  TableRow,
+} from '@heroui/table'
 
 import TechsSlice from '@/components/techs-slice'
 import Typography from '@/components/ui/typography'
@@ -20,6 +29,7 @@ const Page = () => {
   const { dict } = useI18n()
 
   const { activity, isLoading } = useGithubActivity()
+  console.log(activity)
 
   return (
     <div
@@ -175,22 +185,61 @@ const Page = () => {
             </Typography>
           </CardHeader>
           <CardBody>
-            {activity.length &&
-              !isLoading &&
-              activity.map((e: Activity, idx: number) => (
-                <div
-                  key={idx}
-                  className='flex justify-between h-full hover:text-slate-500'
-                >
-                  <Typography as={'legend'} variant='paragraph'>
-                    {e.repo}
-                  </Typography>
-                  <Typography as={'legend'} variant='paragraph'>
-                    {e.date}
-                  </Typography>
-                  {/* <Link href={e.url}>Link</Link> */}
-                </div>
-              ))}
+            {activity.length && !isLoading && (
+              <Table
+                aria-label='Tabla de actividad de GitHub'
+                className='min-w-full'
+              >
+                <TableHeader>
+                  <TableColumn className='w-[40px]'>AVATAR</TableColumn>
+                  <TableColumn>REPOSITORIO</TableColumn>
+                  <TableColumn>BRANCH</TableColumn>
+                  <TableColumn>FECHA</TableColumn>
+                </TableHeader>
+                <TableBody>
+                  {activity.map((e: Activity, idx: number) => (
+                    <TableRow key={idx} className='hover:text-slate-500'>
+                      <TableCell>
+                        <Image
+                          src={e.avatar}
+                          alt={`Avatar de ${e.repo}`}
+                          className='rounded-full mx-3'
+                          width={20}
+                          height={20}
+                        />
+                      </TableCell>
+                      <TableCell>
+                        <Typography
+                          as='span'
+                          variant='paragraph'
+                          className='truncate capitalize block max-w-[200px]'
+                        >
+                          {e.repo.slice(0, 13)}
+                        </Typography>
+                      </TableCell>
+                      <TableCell>
+                        <Typography
+                          as='span'
+                          variant='paragraph'
+                          className='truncate block max-w-[150px] text-start'
+                        >
+                          {e.branch}
+                        </Typography>
+                      </TableCell>
+                      <TableCell>
+                        <Typography
+                          as='span'
+                          variant='paragraph'
+                          className='whitespace-nowrap'
+                        >
+                          {e.date}
+                        </Typography>
+                      </TableCell>
+                    </TableRow>
+                  ))}
+                </TableBody>
+              </Table>
+            )}
           </CardBody>
         </Card>
       </div>

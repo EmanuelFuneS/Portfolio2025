@@ -23,6 +23,7 @@
     "@heroui/select": "^2.4.24",
     "@heroui/switch": "^2.2.21",
     "@heroui/system": "2.4.19",
+    "@heroui/table": "^2.2.32",
     "@heroui/theme": "2.4.19",
     "@heroui/toast": "^2.0.13",
     "@heroui/tooltip": "^2.2.21",

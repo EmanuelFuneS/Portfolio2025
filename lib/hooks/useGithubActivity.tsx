@@ -3,9 +3,11 @@ import { useEffect, useState } from 'react'
 const githubProfile = process.env.GITHUB_PROFILE || 'EmanuelFuneS'
 
 export interface Activity {
+  avatar: string
   repo: string
   url: string
   date: string
+  branch: string
 }
 
 interface GithubResponse {
@@ -50,7 +52,9 @@ const useGithubActivity = (): {
         const data = events
           .filter((e: GithubResponse) => e.type === 'PushEvent')
           .map((e: GithubResponse) => ({
-            repo: e.repo.name,
+            avatar: e.actor.avatar_url,
+            repo: e.repo.name.replace('EmanuelFuneS/', ''),
+            branch: e.payload.ref.replace('refs/heads/', ''),
             url: e.repo.url,
             date: new Date(e.created_at).toLocaleDateString(),
           }))
