@@ -12,10 +12,10 @@ export const screenshotsUrls = [
   {
     image: Vercel,
     name: 'Storage App',
-    url: '',
+    url: 'https://storage-web-phi.vercel.app/',
     github: 'https://github.com/EmanuelFuneS/storage-cross-platform',
     description:
-      'cloud storage application using AWS S3 and CloudFront for efficient data retrieval, deployed on Vercel with Next.js, React, TypeScript and Tailwind, allowing users to upload and manage files securely with low‑latency global access.',
+      'Desarrollé una aplicación de almacenamiento en la nube usando AWS S3 y CloudFront para una recuperación eficiente de datos, desplegada en Vercel con Next.js, React, TypeScript y Tailwind, que permite a los usuarios subir y gestionar archivos de forma segura con acceso global de baja latencia.',
   },
   {
     image: Vercel,
@@ -24,7 +24,7 @@ export const screenshotsUrls = [
     github:
       'https://github.com/No-Country-simulation/S03-26-Equipo-14-Web-App-Development/tree/dev',
     description:
-      'EdTech CMS to manage testimonials and success stories, featuring role‑based authentication, YouTube and Cloudinary integration for multimedia, text/image/video testimonial creation, category and tag classification, a moderation and review system, intelligent search, embeddable widgets and an NPM library, plus a public API for external websites.',
+      'Construí un CMS EdTech para gestionar testimonios e historias de éxito, con autenticación basada en roles, integración con YouTube y Cloudinary para contenido multimedia, creación de testimonios en texto, imagen y video, clasificación por categorías y etiquetas, sistema de moderación y revisión, búsqueda inteligente, widgets embebibles con una librería NPM, y una API pública para sitios web externos.',
   },
   {
     image: byteBazar,
@@ -33,7 +33,7 @@ export const screenshotsUrls = [
     github:
       'https://github.com/EmanuelFuneS/e-commerce/tree/main/apps/byte-bazar',
     description:
-      'Full-stack e-commerce platform currently in active development, built with a monorepo architecture using Turborepo for efficient multi-package management. Features include product listings, cart management, and secure authentication via JWT. The stack includes Next.js (App Router), TypeScript, and Tailwind CSS on the frontend, with Prisma as the ORM connected to a PostgreSQL database hosted on Supabase. Media assets are handled through Cloudinary, and the entire environment is containerized with Docker for consistent development and deployment. Deployed on Vercel.',
+      'Actualmente estoy desarrollando una plataforma de e-commerce full-stack con arquitectura monorepo usando Turborepo para la gestión eficiente de múltiples paquetes. Incluye listado de productos, gestión de carrito y autenticación segura mediante JWT. El stack incluye Next.js (App Router), TypeScript y Tailwind CSS en el frontend, con Prisma como ORM conectado a PostgreSQL en Supabase. Los recursos multimedia se manejan con Cloudinary y todo el entorno está containerizado con Docker. Desplegado en Vercel.',
   },
   {
     image: intercom,
@@ -41,7 +41,7 @@ export const screenshotsUrls = [
     url: 'https://webs-intercom.vercel.app/',
     github: 'https://github.com/EmanuelFuneS/Webs/tree/main/apps/intercom',
     description:
-      'Static site built with Next.js (SSG), React, TypeScript and Tailwind CSS, structured as a monorepo. Fetches and downloads content and images from a headless Strapi CMS at build time for fully static deployment.',
+      'Creé un sitio estático con Next.js (SSG), React, TypeScript y Tailwind CSS, estructurado como monorepo. Obtiene y descarga contenido e imágenes desde un CMS headless Strapi en tiempo de compilación para un despliegue completamente estático.',
   },
   {
     image: github,
@@ -49,7 +49,7 @@ export const screenshotsUrls = [
     url: null,
     github: 'https://github.com/EmanuelFuneS/Webs/tree/main/apps/strapi-app',
     description:
-      'Headless CMS powered by Strapi, exposing a REST API for content and media management. Includes a local content and image download pipeline to support static site generation on the frontend.',
+      'Implementé un CMS headless con Strapi que expone una API REST para la gestión de contenido y medios. Incluye un pipeline de descarga local de contenido e imágenes para soportar la generación de sitios estáticos en el frontend.',
   },
   {
     image: authApp,
@@ -58,7 +58,7 @@ export const screenshotsUrls = [
     github:
       'https://github.com/EmanuelFuneS/e-commerce/tree/main/apps/auth-app',
     description:
-      'Standalone micro-frontend focused entirely on the authentication flow, designed to integrate seamlessly into larger micro-frontend architectures. Built with React and Vite for fast bundling, it implements strict client-side form validation using Zod and React Hook Form, ensuring a smooth and reliable user experience. Styled with Tailwind CSS and containerized with Docker. Deployed as a static site on Render. Used in Byte-Bazar, connected with Auth-Service',
+      'Desarrollé un micro-frontend independiente enfocado completamente en el flujo de autenticación, diseñado para integrarse sin problemas en arquitecturas de micro-frontends más grandes. Construido con React y Vite para un bundling rápido, implementa validación estricta de formularios del lado del cliente usando Zod y React Hook Form, asegurando una experiencia de usuario fluida y confiable. Estilizado con Tailwind CSS y containerizado con Docker. Desplegado como sitio estático en Render. Utilizado en Byte-Bazar, conectado con Auth-Service.',
   },
   {
     image: swagger,
@@ -67,7 +67,7 @@ export const screenshotsUrls = [
     github:
       'https://github.com/EmanuelFuneS/e-commerce/tree/main/apps/auth-service',
     description:
-      'Dedicated authentication microservice built with NestJS and TypeScript, designed to be consumed by decoupled frontend applications. Handles user registration, login, and token management via JWT. Leverages Redis for session caching and token blacklisting, and Supabase (PostgreSQL) as the primary database. The service is fully containerized with Docker, making it portable and easy to scale. Deployed on Render. Used in Auth-App with ByteBazar',
+      'Creé un microservicio de autenticación dedicado con NestJS y TypeScript, diseñado para ser consumido por aplicaciones frontend desacopladas. Maneja registro de usuarios, inicio de sesión y gestión de tokens mediante JWT. Utiliza Redis para caché de sesiones y lista negra de tokens, y Supabase (PostgreSQL) como base de datos principal. El servicio está completamente containerizado con Docker, lo que lo hace portátil y fácil de escalar. Desplegado en Render. Utilizado en Auth-App con ByteBazar.',
   },
   /* {
     image: github,
@@ -91,7 +91,7 @@ export const screenshotsUrls = [
     url: 'https://lasles-vpn-xi.vercel.app/',
     github: null,
     description:
-      'Pixel-perfect responsive landing page for a fictional VPN service, built as a frontend challenge to demonstrate UI precision and component structure. Developed with Next.js, React, TypeScript, and Tailwind CSS, following a provided Figma design closely. Emphasizes clean layout, reusable components, and responsive design across all screen sizes. Deployed on Vercel.',
+      'Maqueté una landing page responsive pixel-perfect para un servicio de VPN ficticio, realizada como un challenge frontend para demostrar precisión en la UI y estructura de componentes. Desarrollada con Next.js, React, TypeScript y Tailwind CSS, siguiendo fielmente un diseño de Figma. Enfatiza un layout limpio, componentes reutilizables y diseño responsive en todos los tamaños de pantalla. Desplegada en Vercel.',
   },
   {
     image: luxury,
@@ -99,7 +99,7 @@ export const screenshotsUrls = [
     url: 'https://simple-design-hotel-web.vercel.app/',
     github: 'https://github.com/EmanuelFuneS/Simple-design-hotel-web',
     description:
-      'Modern and elegant hotel booking website showcasing a minimalist design approach. Built with Next.js, React, TypeScript, and Tailwind CSS, the site features room browsing, a clean booking UI, and smooth navigation. Focuses on visual hierarchy and user experience, serving as a demonstration of contemporary web design principles in the hospitality sector. Deployed on Vercel.',
+      'Diseñé y desarrollé un sitio web de reservas de hotel moderno y elegante con un enfoque de diseño minimalista. Construido con Next.js, React, TypeScript y Tailwind CSS, el sitio incluye exploración de habitaciones, una interfaz de reserva limpia y navegación fluida. Se enfoca en la jerarquía visual y la experiencia de usuario, demostrando principios de diseño web contemporáneo en el sector hotelero. Desplegado en Vercel.',
   },
   {
     image: swagger,
@@ -107,7 +107,7 @@ export const screenshotsUrls = [
     url: 'https://todo-api-production-877c.up.railway.app/docs',
     github: 'https://github.com/EmanuelFuneS/todo-Api',
     description:
-      'RESTful API for a todo application built with Python and FastAPI, featuring automatic interactive documentation via Swagger UI. Implements full CRUD operations with MongoDB as the NoSQL database. Includes a comprehensive test suite written with PyTest to ensure endpoint reliability and data integrity. Containerization-ready and deployed on Railway.',
+      'Construí una API RESTful para una aplicación de tareas con Python y FastAPI, con documentación interactiva automática mediante Swagger UI. Implementa operaciones CRUD completas con MongoDB como base de datos NoSQL. Incluye una suite de tests exhaustiva escrita con PyTest para garantizar la confiabilidad de los endpoints y la integridad de los datos. Preparada para containerización y desplegada en Railway.',
   },
   {
     image: agile,
@@ -115,6 +115,6 @@ export const screenshotsUrls = [
     url: 'https://agilestrat-frontend.vercel.app/',
     github: null,
     description:
-      'Web application designed to support agile project management workflows, built with React, TypeScript, and Vite for a fast and responsive experience. Features a clean UI crafted with custom CSS, providing teams with tools to organize and visualize their strategies effectively. Deployed on Vercel.',
+      'Creé una aplicación web para soportar flujos de trabajo de gestión ágil de proyectos, construida con React, TypeScript y Vite para una experiencia rápida y responsiva. Cuenta con una UI limpia elaborada con CSS personalizado, proporcionando a los equipos herramientas para organizar y visualizar sus estrategias de manera efectiva. Desplegada en Vercel.',
   },
 ]
