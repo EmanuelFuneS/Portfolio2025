@@ -48,7 +48,6 @@ const useGithubActivity = (): {
     fetch(`https://api.github.com/users/${githubProfile}/events/public`)
       .then(r => r.json())
       .then(events => {
-        console.log(events)
         const data = events
           .filter((e: GithubResponse) => e.type === 'PushEvent')
           .map((e: GithubResponse) => ({

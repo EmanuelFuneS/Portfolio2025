@@ -29,7 +29,6 @@ const Page = () => {
   const { dict } = useI18n()
 
   const { activity, isLoading } = useGithubActivity()
-  console.log(activity)
 
   return (
     <div
