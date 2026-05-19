@@ -507,7 +507,7 @@
   resolved "https://registry.yarnpkg.com/@heroui/shared-utils/-/shared-utils-2.1.12.tgz#2b0c654797985e8f66bfb7c00f5227ee05bf9ffb"
   integrity sha512-0iCnxVAkIPtrHQo26Qa5g0UTqMTpugTbClNOrEPsrQuyRAq7Syux998cPwGlneTfB5E5xcU3LiEdA9GUyeK2cQ==
 
-"@heroui/spinner@2.2.29":
+"@heroui/spinner@2.2.29", "@heroui/spinner@^2.2.29":
   version "2.2.29"
   resolved "https://registry.yarnpkg.com/@heroui/spinner/-/spinner-2.2.29.tgz#b20f943a98a7ee8fd7cfb389b9ceab8712414280"
   integrity sha512-08mWpL4+pdACcyzT5MjR0nSkKoWbab0oPzY+JHxIdPSSh3S8JJ7C8dUeV3Kj/15NRzzZlcTM3ClRCV8fdeGmuw==

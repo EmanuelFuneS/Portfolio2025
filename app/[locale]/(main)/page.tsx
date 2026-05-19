@@ -16,6 +16,7 @@ import {
 
 import TechsSlice from '@/components/techs-slice'
 import Typography from '@/components/ui/typography'
+import Loading from '@/components/ui/loading'
 
 import CardProject from '../../../components/card-project'
 import { downloadCvFromApi } from '../../../lib/cv-download'
@@ -184,8 +185,11 @@ const Page = () => {
             </Typography>
           </CardHeader>
           <CardBody>
-            {activity.length && !isLoading && (
-              <Table
+            {isLoading ? (
+              <Loading />
+            ) : (
+              activity.length > 0 && (
+                <Table
                 aria-label='Tabla de actividad de GitHub'
                 className='min-w-full'
               >
@@ -238,7 +242,7 @@ const Page = () => {
                   ))}
                 </TableBody>
               </Table>
-            )}
+            ))}
           </CardBody>
         </Card>
       </div>
