@@ -1,10 +1,10 @@
 import intercom from '@/public/Intercom.png'
+import storageApp from '@/public/StorageApp.png'
 import swagger from '@/public/Swagger.png'
-import Vercel from '@/public/vercel.png'
 import byteBazar from '@/public/byte-bazar.png'
 import lasVpn from '@/public/laslesvpn.png'
 import luxury from '@/public/luxury.png'
-import storageApp from "@/public/StorageApp.png"
+import Vercel from '@/public/vercel.png'
 
 export const screenshotsUrls = [
   {
@@ -22,7 +22,7 @@ export const screenshotsUrls = [
     github:
       'https://github.com/No-Country-simulation/S03-26-Equipo-14-Web-App-Development/tree/dev',
     description:
-      'Construí un CMS EdTech para gestionar testimonios e historias de éxito, con autenticación basada en roles, integración con YouTube y Cloudinary para contenido multimedia, creación de testimonios en texto, imagen y video, clasificación por categorías y etiquetas, sistema de moderación y revisión, búsqueda inteligente, widgets embebibles con una librería NPM, y una API pública para sitios web externos.',
+      'Participe en el desarrollo de CMS EdTech para gestionar testimonios e historias de éxito, con autenticación basada en roles, integración con YouTube y Cloudinary para contenido multimedia, creación de testimonios en texto, imagen y video, clasificación por categorías y etiquetas, sistema de moderación y revisión, búsqueda inteligente, widgets embebibles con una librería NPM, y una API pública para sitios web externos.',
   },
   {
     image: byteBazar,
@@ -58,7 +58,7 @@ export const screenshotsUrls = [
     github: "",
     description: 'Todo app, developed in flutter',
     }, */
-  {
+  /*  {
     image: lasVpn,
     name: 'LaslesVpn',
     url: 'https://lasles-vpn-xi.vercel.app/',
@@ -81,5 +81,5 @@ export const screenshotsUrls = [
     github: 'https://github.com/EmanuelFuneS/todo-Api',
     description:
       'Construí una API RESTful para una aplicación de tareas con Python y FastAPI, con documentación interactiva automática mediante Swagger UI. Implementa operaciones CRUD completas con MongoDB como base de datos NoSQL. Incluye una suite de tests exhaustiva escrita con PyTest para garantizar la confiabilidad de los endpoints y la integridad de los datos. Preparada para containerización y desplegada en Railway.',
-  },
+  },*/
 ]
