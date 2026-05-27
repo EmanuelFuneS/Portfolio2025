@@ -15,8 +15,8 @@ import {
 } from '@heroui/table'
 
 import TechsSlice from '@/components/techs-slice'
-import Typography from '@/components/ui/typography'
 import Loading from '@/components/ui/loading'
+import Typography from '@/components/ui/typography'
 
 import CardProject from '../../../components/card-project'
 import { downloadCvFromApi } from '../../../lib/cv-download'
@@ -190,59 +190,60 @@ const Page = () => {
             ) : (
               activity.length > 0 && (
                 <Table
-                aria-label='Tabla de actividad de GitHub'
-                className='min-w-full'
-              >
-                <TableHeader>
-                  <TableColumn className='w-[40px]'>AVATAR</TableColumn>
-                  <TableColumn>REPOSITORIO</TableColumn>
-                  <TableColumn>BRANCH</TableColumn>
-                  <TableColumn>FECHA</TableColumn>
-                </TableHeader>
-                <TableBody>
-                  {activity.map((e: Activity, idx: number) => (
-                    <TableRow key={idx} className='hover:text-slate-500'>
-                      <TableCell>
-                        <Image
-                          src={e.avatar}
-                          alt={`Avatar de ${e.repo}`}
-                          className='rounded-full mx-3'
-                          width={20}
-                          height={20}
-                        />
-                      </TableCell>
-                      <TableCell>
-                        <Typography
-                          as='span'
-                          variant='paragraph'
-                          className='truncate capitalize block max-w-[200px]'
-                        >
-                          {e.repo.slice(0, 13)}
-                        </Typography>
-                      </TableCell>
-                      <TableCell>
-                        <Typography
-                          as='span'
-                          variant='paragraph'
-                          className='truncate block max-w-[150px] text-start'
-                        >
-                          {e.branch}
-                        </Typography>
-                      </TableCell>
-                      <TableCell>
-                        <Typography
-                          as='span'
-                          variant='paragraph'
-                          className='whitespace-nowrap'
-                        >
-                          {e.date}
-                        </Typography>
-                      </TableCell>
-                    </TableRow>
-                  ))}
-                </TableBody>
-              </Table>
-            ))}
+                  aria-label='Tabla de actividad de GitHub'
+                  className='min-w-full'
+                >
+                  <TableHeader>
+                    <TableColumn className='w-[40px]'>AVATAR</TableColumn>
+                    <TableColumn>REPOSITORIO</TableColumn>
+                    <TableColumn>BRANCH</TableColumn>
+                    <TableColumn>FECHA</TableColumn>
+                  </TableHeader>
+                  <TableBody>
+                    {activity.map((e: Activity, idx: number) => (
+                      <TableRow key={idx} className='hover:text-slate-500'>
+                        <TableCell>
+                          <Image
+                            src={e.avatar}
+                            alt={`Avatar de ${e.repo}`}
+                            className='rounded-full mx-3'
+                            width={20}
+                            height={20}
+                          />
+                        </TableCell>
+                        <TableCell>
+                          <Typography
+                            as='span'
+                            variant='paragraph'
+                            className='truncate capitalize block max-w-[200px]'
+                          >
+                            {e.repo.slice(0, 13)}
+                          </Typography>
+                        </TableCell>
+                        <TableCell>
+                          <Typography
+                            as='span'
+                            variant='paragraph'
+                            className='truncate block max-w-[150px] text-start'
+                          >
+                            {e.branch}
+                          </Typography>
+                        </TableCell>
+                        <TableCell>
+                          <Typography
+                            as='span'
+                            variant='paragraph'
+                            className='whitespace-nowrap'
+                          >
+                            {e.date}
+                          </Typography>
+                        </TableCell>
+                      </TableRow>
+                    ))}
+                  </TableBody>
+                </Table>
+              )
+            )}
           </CardBody>
         </Card>
       </div>
@@ -303,6 +304,16 @@ const Page = () => {
             />
           ))}
         </div>
+        <Typography as='h3' variant='sub-link'>
+          <Button
+            className='w-full h-full p-0 m-0 bg-transparent border-none shadow-xl hover:scale-105'
+            variant='light'
+          >
+            <Link href={'https://github.com/EmanuelFuneS?tab=repositories'}>
+              View More
+            </Link>
+          </Button>
+        </Typography>
       </section>
     </div>
   )

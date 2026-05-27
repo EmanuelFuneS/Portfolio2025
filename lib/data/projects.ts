@@ -1,10 +1,10 @@
 import intercom from '@/public/Intercom.png'
 import storageApp from '@/public/StorageApp.png'
-import swagger from '@/public/Swagger.png'
 import byteBazar from '@/public/byte-bazar.png'
-import lasVpn from '@/public/laslesvpn.png'
-import luxury from '@/public/luxury.png'
 import Vercel from '@/public/vercel.png'
+/* import swagger from '@/public/Swagger.png'
+import lasVpn from '@/public/laslesvpn.png'
+import luxury from '@/public/luxury.png' */
 
 export const screenshotsUrls = [
   {
