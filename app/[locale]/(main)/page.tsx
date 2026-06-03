@@ -39,7 +39,7 @@ const Page = () => {
       <div
         className='
   flex flex-col gap-2.5
-  md:grid md:grid-cols-3 md:grid-rows-5 
+  md:grid md:grid-cols-3 md:grid-rows-5 md:px-0
   lg:grid lg:grid-cols-4 lg:grid-rows-3 
   xl:grid xl:grid-cols-5 xl:grid-rows-3 
   bg-[var(--app-bg)] rounded-2xl min-h-[700px]
@@ -57,12 +57,12 @@ const Page = () => {
   '
         >
           <CardHeader>
-            <Typography as='h1' variant='headline' className='py-4 text-start'>
+            <Typography as='h1' variant='headline' className='py-4 lg:text-start'>
               {dict.about.title}
             </Typography>
           </CardHeader>
           <CardBody className='flex items-center justify-center'>
-            <Typography as='p' variant='subline' className='text-start'>
+            <Typography as='p' variant='subline' className='lg:text-start'>
               {dict.about.aboutMe}
             </Typography>
           </CardBody>
@@ -170,7 +170,7 @@ const Page = () => {
         {/* Item 5 - Last Activity */}
         <Card
           className='
-    w-full
+    w-full px-10
     xl:col-start-1 xl:col-span-2 xl:row-start-3 xl:row-span-1
     lg:col-start-1 lg:col-span-4 lg:row-start-4 lg:row-span-1
     md:col-start-1 md:col-span-3 md:row-start-6 md:row-span-1
@@ -196,7 +196,7 @@ const Page = () => {
                   <TableHeader>
                     <TableColumn className='w-[40px]'>AVATAR</TableColumn>
                     <TableColumn>REPOSITORIO</TableColumn>
-                    <TableColumn>BRANCH</TableColumn>
+                    <TableColumn className='hidden md:table-column'>BRANCH</TableColumn>
                     <TableColumn>FECHA</TableColumn>
                   </TableHeader>
                   <TableBody>
@@ -220,7 +220,7 @@ const Page = () => {
                             {e.repo.slice(0, 13)}
                           </Typography>
                         </TableCell>
-                        <TableCell>
+                        <TableCell className='hidden md:table-cell'>
                           <Typography
                             as='span'
                             variant='paragraph'
