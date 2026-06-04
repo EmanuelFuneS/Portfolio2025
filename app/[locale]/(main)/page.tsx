@@ -196,7 +196,7 @@ const Page = () => {
                   <TableHeader>
                     <TableColumn className='w-[40px]'>AVATAR</TableColumn>
                     <TableColumn>REPOSITORIO</TableColumn>
-                    <TableColumn className='hidden md:table-column'>BRANCH</TableColumn>
+                    <TableColumn className='hidden md:flex items-center'>BRANCH</TableColumn>
                     <TableColumn>FECHA</TableColumn>
                   </TableHeader>
                   <TableBody>
